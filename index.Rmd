@@ -1,12 +1,26 @@
 ---
 title: "Home"
-author: [C Wray](https://chris-x.github.io/)
+author: "[C Wray](https://chris-x.github.io/)"
 output: html_document
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+## Maths
+
+This section list some maths I use
+## R
+
+This section is about R
+
+## Python
+
+This section is about Python
+
+## C++
+
+This section is about C++
 
 ## R Markdown
 
@@ -17,6 +31,7 @@ When you click the **Knit** button a document will be generated that includes bo
 ```{r cars}
 summary(cars)
 ```
+
 
 ## Including Plots
 
