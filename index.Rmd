@@ -30,7 +30,10 @@ These pages are created using [R Markdown](<http://rmarkdown.rstudio.com>) with 
 
 ## A Plot
 
-for example:
+image: ![](images/fig_5_NEW.png) 
+
+
+another one - for example:
 
 ```{r pressure, echo=FALSE}
 plot(pressure)
