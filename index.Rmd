@@ -1,12 +1,23 @@
 ---
-title: "Home"
+title: "About cxw"
 author: "[C Wray](https://chris-x.github.io/)"
+header-includes:
+   - \usepackage{bbm}
 output: html_document
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+## A Bio
+I read mathematics at [St. Catharine's College](http://www.caths.cam.ac.uk/), part of the [University of Cambridge](https://www.cam.ac.uk/). I then worked [here](https://www.blackrock.com/), and later on I completed a PhD in maths and complex systems at [University College London (UCL)](http://www.ucl.ac.uk/) supervised by [Prof. Steve Bishop](https://www.ucl.ac.uk/maths/steven-bishop). Part of my PhD was spent working with [Prof. Doyne Farmer (Oxford/INET)](http://www.oxfordmartin.ox.ac.uk/people/407) on agent-based modelling, and economic and financial complexity.
+
+In 2007 I made this random equation. With 
+
+\[
+w \not \sim N \int_{B} \mathbb{P}(a \in A)\: da = \pi^{w}
+\]
+
 ## Maths
 
 This section lists some maths I use
