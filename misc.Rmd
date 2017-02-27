@@ -7,3 +7,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## R Markdown
+
+> [Campbell House](http://campbellhousepenang.com/) -- An exceptional boutique hotel in Penang, Malaysia
+
+> [Aggelos Consulting](http://www.aggelosconsulting.com/) -- independent strategic communications

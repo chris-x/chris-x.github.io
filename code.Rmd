@@ -31,7 +31,7 @@ Languages I find interesting (for one or another reasons) but have not (yet) nee
 
 I have used R since 2003, where I picked it up for statistical computing (and applied statistics). While the core language has not changed too much since then, the R ecosystem (meaning: developer environments, language interoperability and extensions, packages and domain specific use-cases) has grown rapidly over the last few years.
 
-R is an odd programming language. While most beginners often think of it as a fancy statistical calculator, it is both a powerful and flexible language. For example, many new R users learn how to write and use (user-defined) functions quite quickly, without having to know [these details](https://kevinushey.github.io/blog/2015/11/22/what-is-a-function/).
+R is considered to be an *unconventional* programming language. While most beginners often think of it as a fancy statistical calculator, it is both a powerful and flexible language / scripting language for the more general R environment (similar to how VBA is a scripting language for Excel). Although this definition downplays many of R strengths - it is accurate. For casual R users, much of the advanced mechanisms are not immediately obvious: many new R users learn how to write and use (user-defined) functions quite quickly, without having to know [these details](https://kevinushey.github.io/blog/2015/11/22/what-is-a-function/), for instance.
 
 * There are many *guides* to R on-line, and much of the basic syntax and functionality can be picked up using a combination of *doing*, and reading the source code, and (excellent) documentation of packages. A great book for newcomers to R is [Learning R](https://www.amazon.co.uk/Learning-R-Richard-Cotton/dp/1449357105/ref=sr_1_2?s=books&ie=UTF8&qid=1488064624&sr=1-2) by Richard Cotton. For intermediate users, or those interested in the more advanced features of R, Hadley Wickham's [Advanced R](http://adv-r.had.co.nz/) is hard to beat. 
 
@@ -119,4 +119,12 @@ A Shiny interactive app to investigate the expected lengths of each of ordered $
 
 # Python
 
-I first used [Python](https://www.python.org/) in 2011, and have been using it when I can since then. Python is a great language to work with, and is sufficiently distinct from R and C++ to make learning and developing with it interesting and useful. 
+I first used [Python](https://www.python.org/) in 2011, and use it when/where I can. Python is a simple and readable language to work with, and is sufficiently distinct from R and C++ to make learning and developing with it interesting and useful. Although not specifically designed for statistical data analysis, Python has excellent support for it, via the [pandas](http://pandas.pydata.org/) data analysis library.
+
+For statistical / machine learning, the well-known [scikit-learn](http://scikit-learn.org/stable/) is excellent, and there is Python support for deep learning via [Keras](https://keras.io/) (running on theano or TensorFlow).
+
+
+# R v Python?
+
+See [this excellent video](https://blog.dominodatalab.com/video-huge-debate-r-vs-python-data-science/) for a comparison of Python and R in terms of data science. The answer is, of course, both are excellent and neither one is perfect.
+

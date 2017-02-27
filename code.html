@@ -323,7 +323,7 @@ div.tocify {
 <div id="r" class="section level1">
 <h1>R</h1>
 <p>I have used R since 2003, where I picked it up for statistical computing (and applied statistics). While the core language has not changed too much since then, the R ecosystem (meaning: developer environments, language interoperability and extensions, packages and domain specific use-cases) has grown rapidly over the last few years.</p>
-<p>R is an odd programming language. While most beginners often think of it as a fancy statistical calculator, it is both a powerful and flexible language. For example, many new R users learn how to write and use (user-defined) functions quite quickly, without having to know <a href="https://kevinushey.github.io/blog/2015/11/22/what-is-a-function/">these details</a>.</p>
+<p>R is considered to be an <em>unconventional</em> programming language. While most beginners often think of it as a fancy statistical calculator, it is both a powerful and flexible language / scripting language for the more general R environment (similar to how VBA is a scripting language for Excel). Although this definition downplays many of R strengths - it is accurate. For casual R users, much of the advanced mechanisms are not immediately obvious: many new R users learn how to write and use (user-defined) functions quite quickly, without having to know <a href="https://kevinushey.github.io/blog/2015/11/22/what-is-a-function/">these details</a>, for instance.</p>
 <ul>
 <li>There are many <em>guides</em> to R on-line, and much of the basic syntax and functionality can be picked up using a combination of <em>doing</em>, and reading the source code, and (excellent) documentation of packages. A great book for newcomers to R is <a href="https://www.amazon.co.uk/Learning-R-Richard-Cotton/dp/1449357105/ref=sr_1_2?s=books&amp;ie=UTF8&amp;qid=1488064624&amp;sr=1-2">Learning R</a> by Richard Cotton. For intermediate users, or those interested in the more advanced features of R, Hadley Wickham’s <a href="http://adv-r.had.co.nz/">Advanced R</a> is hard to beat.</li>
 </ul>
@@ -393,7 +393,12 @@ microbenchmark(a[order(b,decreasing = TRUE)],sort_by(a,b))</code></pre>
 </div>
 <div id="python" class="section level1">
 <h1>Python</h1>
-<p>I first used <a href="https://www.python.org/">Python</a> in 2011, and have been using it when I can since then. Python is a great language to work with, and is sufficiently distinct from R and C++ to make learning and developing with it interesting and useful.</p>
+<p>I first used <a href="https://www.python.org/">Python</a> in 2011, and use it when/where I can. Python is a simple and readable language to work with, and is sufficiently distinct from R and C++ to make learning and developing with it interesting and useful. Although not specifically designed for statistical data analysis, Python has excellent support for it, via the <a href="http://pandas.pydata.org/">pandas</a> data analysis library.</p>
+<p>For statistical / machine learning, the well-known <a href="http://scikit-learn.org/stable/">scikit-learn</a> is excellent, and there is Python support for deep learning via <a href="https://keras.io/">Keras</a> (running on theano or TensorFlow).</p>
+</div>
+<div id="r-v-python" class="section level1">
+<h1>R v Python?</h1>
+<p>See <a href="https://blog.dominodatalab.com/video-huge-debate-r-vs-python-data-science/">this excellent video</a> for a comparison of Python and R in terms of data science. The answer is, of course, both are excellent and neither one is perfect.</p>
 </div>
 
 
