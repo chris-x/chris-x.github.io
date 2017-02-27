@@ -1,0 +1,18 @@
+---
+title: "Academic"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+## Research
+
+This is where research and publications will go
+
+## Teaching
+
+I lectured [Math6105](https://www.ucl.ac.uk/maths/courses/undergraduates/modules/general-ancillary/math6105), a first year maths course at UCL. Here are the supplementary notes I provided
+
+* Complex numbers <a href="complex_numbers_Qs.pdf">pdf</a>
+
+* Series <a href="MATH6105_Series_MACLAURIN_REV.pdf">pdf</a>

@@ -1,0 +1,64 @@
+---
+title: "Maths"
+output:
+ html_document:
+  toc: true
+  toc_depth: 2
+  toc_float: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(viridis)
+library(visNetwork)
+library(igraph)
+```
+
+## Networks
+
+Here are networks
+```{r networks, echo=FALSE}
+colfunc<-colorRampPalette(c("springgreen","purple4"))
+
+
+iggB<-barabasi.game(60,1,directed=FALSE)
+V(iggB)$name=as.character((1:vcount(iggB)))
+
+iggA<-sample_grg(20,0.28,torus = TRUE)
+V(iggA)$name<-as.character(1:vcount(iggA))
+
+igg<-union(iggB, iggA)
+GEdge<-get.edgelist(igg)
+GEdgedf<-data.frame(from=GEdge[,1],to=GEdge[,2],weight=rep(1,nrow(GEdge)))
+GEdgedf$color<-rep("purple",nrow(GEdge))
+
+Gnodes <- data.frame(id= as.numeric(V(igg)$name))
+Gnodes$value<-degree(igg)
+grps <- cut(Gnodes$value,breaks=10,labels=FALSE)
+Gnodes$color<-colfunc(10)[grps]
+
+#Gnodes$group <- cut(Gnodes$value,breaks=10,labels=FALSE)
+visNetwork(Gnodes,GEdgedf)
+```
+
+<!-- ![A small geometric network](images/net_geom.jpeg) -->
+
+<br>
+<br>
+
+## Stick breaking
+
+Stick breaking has a long history in mathematics. For instance we can ask, for the the probability that we can form a triangle from the segments of a broken stick. More generally, we can ask for the probability of forming a $n$-gon after making $n$ breaks (resulting in $n+1$ segments).
+
+A Shiny interactive app to investigating segment lengths in the $n$ break case can be found under the R section of the [Code tab](code.html#deployment:_shiny_and_knitr) on this site. Tap [here](https://chris-x.shinyapps.io/StickBreak/) to launch the app.
+
+<!--- this actually works---!>
+<!-- <iframe src="https://chris-x.shinyapps.io/StickBreak/" style="border: none; width: 440px; height: 600px"></iframe> -->
+
+<br>
+<br>
+<br>
+
+## Machine learning
+
+

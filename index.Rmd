@@ -1,52 +1,12 @@
 ---
-title: "About cxw"
+title: "Chris Wray"
 author: "[C Wray](https://chris-x.github.io/)"
-header-includes:
-   - \usepackage{bbm}
-output: html_document
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-## A Bio
-I read mathematics at [St. Catharine's College](http://www.caths.cam.ac.uk/), part of the [University of Cambridge](https://www.cam.ac.uk/). I then worked in quantitative finance, and later on I completed a PhD in maths and complex systems at [University College London (UCL)](http://www.ucl.ac.uk/) supervised by [Prof. Steve Bishop](https://www.ucl.ac.uk/maths/steven-bishop). Part of my PhD was spent working with [Prof. Doyne Farmer (Oxford/INET)](http://www.oxfordmartin.ox.ac.uk/people/407) on agent-based modelling, and economic / financial complexity.
 
-In 2007 I made this random equation. With 
+![[Source: Paolo Čerić PATAKK](http://patakk.tumblr.com/post/48570447360/mrtvi-delaunay)](images/network_2.jpg)
 
-\[
-w \not \sim N \int_{B} \mathbb{P}(a \in A)\: da = \pi^{w}
-\]
-
-## Maths
-
-This section lists some maths I use
-
-## R
-
-This section is about R
-
-## Python
-
-This section is about Python
-
-## C++
-
-This section is about C++
-
-## R Markdown
-
-These pages are created using [R Markdown](<http://rmarkdown.rstudio.com>) with [RStudio](https://www.rstudio.com/) to authour HTML.
-
-
-## A Plot
-
-image: ![](images/fig_5_NEW.png) 
-
-
-another one - for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
 
