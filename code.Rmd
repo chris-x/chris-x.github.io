@@ -11,25 +11,27 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 library(microbenchmark)
 ```
-I mostly code in __R__, __R/C++__, __Python__ and __VBA__ depending upon the situation, purpose and need. I am  *language agnostic* (although I will avoid having to read/write Perl vigorously), which means I treat programming as a means to an end. At various times I have had reason to use Java (mostly for agent-based modelling via the MASON framework), SQL for data gathering and manipulation, and Perl for basic scripting. I experimented with Julia, in its (very) early days. 
+I mostly code in __R__, __R/C++__, __Python__ and __VBA__ depending upon the situation, purpose and need. I am  *language agnostic* (although I will vigorously avoid having to read/write Perl, if I can). At various times I have had reason to use __Java__ (mostly for agent-based modelling via the [MASON](http://cs.gmu.edu/~eclab/projects/mason/) framework), __SQL__ for data gathering and manipulation, and __Perl__ for basic scripting. 
 
-Languages I find interesting (for one or another reasons) but have not (yet) needed to use are:
+For specialised mathematical tasks I have used __Matlab__ and __Mathematica__ (and the intrguing [Wolfram language](http://www.wolfram.com/language/fast-introduction-for-programmers/en/)). I experimented with [Julia](http://julialang.org/), in its (very) early days. 
 
-* __D__ -- a language that started out as re-engineered C++, that claims to be safer and easier to code than its forebear.
+Languages I find interesting (for one or another reasons) but have not (yet) needed to use, are:
 
-* __Clojure__ -- a dialect of Lisp, a language as old as Fortran, but still very much in use today. Supposedly supports functional programming and designed for concurrency.
+* [__D__](https://dlang.org/) -- a language that started out as re-engineered C++, that claims to be safer and easier to code than its forebear.
 
-* __Ruby__ -- an interesting and well-regarded general purpose language developed in the 1990s in Japanese computer scientists.
+* [__Clojure__](https://clojure.org/) -- a dialect of Lisp, a language as old as Fortran, but still very much in use today. Supposedly supports functional programming and designed for concurrency.
 
-* __C#__ -- a well-known and popular language similar to C++ and Java.
+* [__Ruby__](https://www.ruby-lang.org/en/) -- an interesting and well-regarded general purpose language developed in the 1990s.
 
-* __Haskell__ -- probably the most *heard-of* language in this list. A purely functional language named after Haskell Curry, who worked in combinatorial logic. Even the description sounds *difficult*...
+* [__C#__](https://msdn.microsoft.com/en-gb/library/67ef8sbd.aspx) -- a well-known and popular language similar to C++ and Java.
+
+* [__Haskell__](https://www.haskell.org/) -- probably the most *heard-of* language in this list. A purely functional language named after Haskell Curry, who worked in combinatorial logic. Even the description sounds *difficult*...
 
 # R
 
-I have used R since 2003, where I picked it up for statistical computing (or applied statistics). While the core language has not changed too much since then, the R ecosystem (meaning: developer environments, language interoperability and extensions, packages and domain specific use-cases) has grown rapidly over the last few years.
+I have used R since 2003, where I picked it up for statistical computing (and applied statistics). While the core language has not changed too much since then, the R ecosystem (meaning: developer environments, language interoperability and extensions, packages and domain specific use-cases) has grown rapidly over the last few years.
 
-R is an odd programming language. While most beginners often think of it as a fancy statistical calculator, it is both a powerful and flexible language. For example, many new R users learn how to write and use (user-defined) functions quite quickly, without knowing [these details](https://kevinushey.github.io/blog/2015/11/22/what-is-a-function/)
+R is an odd programming language. While most beginners often think of it as a fancy statistical calculator, it is both a powerful and flexible language. For example, many new R users learn how to write and use (user-defined) functions quite quickly, without having to know [these details](https://kevinushey.github.io/blog/2015/11/22/what-is-a-function/)
 
 * There are many *guides* to R on-line, and much of the basic syntax and functionality can be picked up using a combination of *doing*, and reading the source code, and (excellent) documentation of packages. A great book for newcomers to R is [Learning R](https://www.amazon.co.uk/Learning-R-Richard-Cotton/dp/1449357105/ref=sr_1_2?s=books&ie=UTF8&qid=1488064624&sr=1-2) by Richard Cotton. For intermediate users, or those interested in the more advanced features of R, Hadley Wickham's [Advanced R](http://adv-r.had.co.nz/) is hard to beat. 
 
