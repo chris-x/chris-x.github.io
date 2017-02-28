@@ -29,6 +29,7 @@ DD<-degree(igg);
 Gnodes <- data.frame(id = as.numeric(V(igg)$name),value=DD,color=colfunc(10)[cut(DD,breaks=10,labels=FALSE)])
 visNetwork(Gnodes,GEdgedf,main = "scale-free network with geometric core") %>% visInteraction(dragView=FALSE,zoomView=FALSE)
 ```
-## Complex systems and networks
+
+# Complex systems and networks
 
 I am primarily interested in complex systems and spreading processes on networks.
