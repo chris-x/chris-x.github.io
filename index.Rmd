@@ -2,10 +2,6 @@
 title: "Chris Wray"
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
 ![[Source: Paolo Čerić PATAKK](http://patakk.tumblr.com/post/48570447360/mrtvi-delaunay)](images/network_2.jpg)
 
 
