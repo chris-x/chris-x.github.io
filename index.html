@@ -183,8 +183,21 @@ $(document).ready(function () {
     About
   </a>
 </li>
-<li>
-  <a href="maths.html">Maths</a>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Maths
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="maths.html">Research</a>
+    </li>
+    <li>
+      <a href="teaching.html">Teaching</a>
+    </li>
+    <li class="dropdown-header">Challange</li>
+  </ul>
 </li>
 <li>
   <a href="code.html">Code</a>
@@ -192,12 +205,11 @@ $(document).ready(function () {
 <li>
   <a href="teach.html">Academic</a>
 </li>
-<li>
-  <a href="misc.html">Links</a>
-</li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        
+        <li>
+  <a href="misc.html">Links</a>
+</li>
       </ul>
     </div><!--/.nav-collapse -->
   </div><!--/.container -->

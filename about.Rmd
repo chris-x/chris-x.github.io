@@ -8,6 +8,10 @@ knitr::opts_chunk$set(echo = TRUE)
 
 I read mathematics at [St. Catharine's College](http://www.caths.cam.ac.uk/), part of the [University of Cambridge](https://www.cam.ac.uk/). I then worked in quantitative finance, and later on I completed a PhD in maths and complex systems at [University College London (UCL)](http://www.ucl.ac.uk/) supervised by [Prof. Steve Bishop](https://www.ucl.ac.uk/maths/steven-bishop). Part of my PhD was spent working with [Prof. Doyne Farmer (Oxford/INET)](http://www.oxfordmartin.ox.ac.uk/people/407) on agent-based modelling, and economic / financial complexity.
 
+
+<chris.x.898@gmail.com>
+
+
 In 2007 I made this random equation. With 
 
 \[

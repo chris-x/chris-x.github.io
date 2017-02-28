@@ -7,6 +7,9 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## R Markdown
+> [Find me here](https://www.linkedin.com/in/chriswrayuk/)
+
+> <a href="mailto:john@example.com">Email me< /a>
 
 > [Campbell House](http://campbellhousepenang.com/) -- An exceptional boutique hotel in Penang, Malaysia
 
