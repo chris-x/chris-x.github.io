@@ -2,9 +2,6 @@ name: "About me"
 navbar:
   title: "Chris Wray"
   left:
-    - text: "About"
-      icon: fa-info
-      href: about.html
     - text: "Maths"
       menu:
        - text: "Research"
@@ -21,6 +18,11 @@ navbar:
          href: py.html
        - text: "VBA"
          href: vba.html
+    - text: "Finance"
+      href: Finance.html
+    - text: "About"
+      icon: fa-info
+      href: about.html
   right:
     - text: "Links"
       href: misc.html
