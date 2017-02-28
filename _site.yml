@@ -8,14 +8,19 @@ navbar:
     - text: "Maths"
       menu:
        - text: "Research"
-         href: maths.html
+         href: research.html
        - text: "Teaching"
          href: teaching.html
-       - text: "Challange"
+       - text: "Interesting elementary challanges"
+         href: interesting.html
     - text: "Code"
-      href: code.html
-    - text: "Academic"
-      href: teach.html
+      menu:
+       - text: "R/C++"
+         href: r_cpp.html
+       - text: "Python"
+         href: py.html
+       - text: "VBA"
+         href: vba.html
   right:
     - text: "Links"
       href: misc.html

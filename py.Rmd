@@ -1,0 +1,28 @@
+---
+title: "py"
+output:
+ html_document:
+  toc: true
+  toc_depth: 2
+  toc_float: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Python
+
+I first used [Python](https://www.python.org/) in 2011, and use it when/where I can. Python is a simple and readable language to work with, and is sufficiently distinct from R and C++ to make learning and developing with it interesting and useful. Although not specifically designed for statistical data analysis, Python has excellent support for it via the [pandas](http://pandas.pydata.org/) data analysis library.
+
+For statistical / machine learning, the well-known [scikit-learn](http://scikit-learn.org/stable/) is excellent, and there is Python support for deep learning via [Keras](https://keras.io/) (running on theano or TensorFlow).
+
+<br>
+
+## Machine learning
+
+ML here
+
+## R v Python?
+
+See [this excellent video](https://blog.dominodatalab.com/video-huge-debate-r-vs-python-data-science/) for a comparison of Python and R in terms of data science. The answer is, of course, both are excellent and neither one is perfect.

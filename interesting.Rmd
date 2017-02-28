@@ -1,0 +1,26 @@
+---
+title: "Interesting"
+output:
+ html_document:
+  toc: true
+  toc_depth: 1
+  toc_float: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+These problems are challenging, but require only basic undergraduate, at most.
+
+<br>
+
+# Random contractions
+
+Contractions example
+
+# Stick breaking
+
+Stick breaking has a long history in mathematics. For instance we can ask, for the the probability that we can form a triangle from the segments of a broken stick. More generally, we can ask for the probability of forming a $n$-gon after making $n$ breaks (resulting in $n+1$ segments).
+
+A Shiny interactive app to investigating segment lengths in the $n$ break case can be found under the R section of the [Code tab](code.html#deployment:_shiny_and_knitr) on this site. Tap [here](https://chris-x.shinyapps.io/StickBreak/) to launch the app.
