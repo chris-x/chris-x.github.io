@@ -1,5 +1,5 @@
 ---
-title: "vba"
+title: "VBA"
 output: html_document
 ---
 
@@ -7,6 +7,5 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# VBA
 
 This is where VBA will go

@@ -11,7 +11,7 @@
 
 
 
-<title>Teaching</title>
+<title>Python</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -19,6 +19,9 @@
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-1.1/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-1.1/highlight.js"></script>
@@ -162,6 +165,101 @@ $(document).ready(function () {
 
 
 
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+  padding-left: 25px;
+  text-indent: 0;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
 
 
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
@@ -233,19 +331,27 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Teaching</h1>
+<h1 class="title toc-ignore">Python</h1>
 
 </div>
 
 
-<p>I lectured <a href="https://www.ucl.ac.uk/maths/courses/undergraduates/modules/general-ancillary/math6105">Math6105</a>, a first year maths course at UCL. Here are the supplementary notes I provided</p>
-<ul>
-<li><p>Complex numbers <a href="complex_numbers_Qs.pdf">pdf</a></p></li>
-<li><p>Series <a href="MATH6105_Series_MACLAURIN_REV.pdf">pdf</a></p></li>
-</ul>
+<p>I first used <a href="https://www.python.org/">Python</a> in 2011, and use it when/where I can. Python is a simple and readable language to work with, and is sufficiently distinct from R and C++ to make learning and developing with it interesting and useful. Although not specifically designed for statistical data analysis, Python has excellent support for it via the <a href="http://pandas.pydata.org/">pandas</a> data analysis library.</p>
+<p>For statistical / machine learning, the well-known <a href="http://scikit-learn.org/stable/">scikit-learn</a> is excellent, and there is Python support for deep learning via <a href="https://keras.io/">Keras</a> (running on theano or TensorFlow).</p>
+<p><br></p>
+<div id="machine-learning" class="section level2">
+<h2>Machine learning</h2>
+<p>ML here</p>
+</div>
+<div id="r-v-python" class="section level2">
+<h2>R v Python?</h2>
+<p>See <a href="https://blog.dominodatalab.com/video-huge-debate-r-vs-python-data-science/">this excellent video</a> for a comparison of Python and R in terms of data science. The answer is, of course, both are excellent and neither one is perfect.</p>
+</div>
 
 
 
+</div>
+</div>
 
 </div>
 

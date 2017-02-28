@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>R/C++</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-1.1/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-1.1/highlight.js"></script>
+<link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs && document.readyState && document.readyState === "complete") {
+   window.setTimeout(function() {
+      hljs.initHighlighting();
+   }, 0);
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+
+.section h2 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h3 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h4 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h5 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h6 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+  padding-left: 25px;
+  text-indent: 0;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Chris Wray</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="about.html">
+    <span class="fa fa-info"></span>
+     
+    About
+  </a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Maths
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="research.html">Research</a>
+    </li>
+    <li>
+      <a href="teaching.html">Teaching</a>
+    </li>
+    <li>
+      <a href="interesting.html">Interesting elementary challanges</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Code
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="r_cpp.html">R/C++</a>
+    </li>
+    <li>
+      <a href="py.html">Python</a>
+    </li>
+    <li>
+      <a href="vba.html">VBA</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="misc.html">Links</a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">R/C++</h1>
+
+</div>
+
+
+<p>I mostly code in <strong>R</strong>, <strong>R/C++</strong>, <strong>Python</strong> and <strong>VBA</strong> depending upon the situation, purpose and need. I am <em>language agnostic</em> (although I will vigorously avoid having to read/write Perl, if I can). At various times I have had reason to use <strong>Java</strong> (mostly for agent-based modelling via the <a href="http://cs.gmu.edu/~eclab/projects/mason/">MASON</a> framework), <strong>SQL</strong> for data gathering and manipulation, and <strong>Perl</strong> for basic scripting.</p>
+<p>For specialised mathematical tasks I have used <strong>Matlab</strong> and <strong>Mathematica</strong> (and the intrguing <a href="http://www.wolfram.com/language/fast-introduction-for-programmers/en/">Wolfram language</a>). I experimented with <a href="http://julialang.org/">Julia</a>, in its (very) early days.</p>
+<p>Languages I find interesting (for one or another reasons) but have not (yet) needed to use, are:</p>
+<ul>
+<li><p><a href="https://dlang.org/"><strong>D</strong></a> – a language that started out as re-engineered C++, that claims to be safer and easier to code than its forebear.</p></li>
+<li><p><a href="https://clojure.org/"><strong>Clojure</strong></a> – a dialect of Lisp, a language as old as Fortran, but still very much in use today. Supposedly supports functional programming and designed for concurrency.</p></li>
+<li><p><a href="https://www.ruby-lang.org/en/"><strong>Ruby</strong></a> – an interesting and well-regarded general purpose language developed in the 1990s.</p></li>
+<li><p><a href="https://msdn.microsoft.com/en-gb/library/67ef8sbd.aspx"><strong>C#</strong></a> – a well-known and popular language similar to C++ and Java.</p></li>
+<li><p><a href="https://www.haskell.org/"><strong>Haskell</strong></a> – probably the most <em>heard-of</em> language in this list. A purely functional language named after Haskell Curry, who worked in combinatorial logic. Even the description sounds <em>difficult</em>…</p></li>
+</ul>
+<div id="r" class="section level1">
+<h1>R</h1>
+<p>I have used R since 2003, where I picked it up for statistical computing (and applied statistics). While the core language has not changed too much since then, the R ecosystem (meaning: developer environments, language interoperability and extensions, packages and domain specific use-cases) has grown rapidly over the last few years.</p>
+<p>R is considered to be an <em>unconventional</em> programming language. While most beginners often think of it as a fancy statistical calculator, it is both a powerful and flexible language / scripting language for the more general R environment (similar to how VBA is a scripting language for Excel). Although this definition downplays many of R strengths - it is accurate. For casual R users, much of the advanced mechanisms are not immediately obvious: many new R users learn how to write and use (user-defined) functions quite quickly, without having to know <a href="https://kevinushey.github.io/blog/2015/11/22/what-is-a-function/">these details</a>, for instance.</p>
+<ul>
+<li>There are many guides to R on-line, and much of the basic syntax and functionality can be picked up using a combination of <em>doing</em>, reading the source code and (excellent) documentation of packages. A great book for newcomers to R is <a href="https://www.amazon.co.uk/Learning-R-Richard-Cotton/dp/1449357105/ref=sr_1_2?s=books&amp;ie=UTF8&amp;qid=1488064624&amp;sr=1-2">Learning R</a> by Richard Cotton. For intermediate users, or those interested in the more advanced features of the language, Hadley Wickham’s <a href="http://adv-r.had.co.nz/">Advanced R</a> is hard to beat.</li>
+</ul>
+<div id="performance-integrated-r-c-via-rcpp" class="section level2">
+<h2>Performance: Integrated R &amp; C++ via Rcpp</h2>
+<p><a href="http://dirk.eddelbuettel.com/code/rcpp.html">Rcpp</a> is a R package enabling the <em>easy</em> use of compiled code within R. While the R environment makes extensive use of compiled C and Fortran, inlcuding compiled code in packages and user-defined functions was, until now, <em>painful</em>. It is difficult to overstate how workflow in R is extended by Rcpp. Along with the optimised matrix operations of the <a href="http://arma.sourceforge.net/">Armadillo C++ library</a>, available to R through the <a href="http://dirk.eddelbuettel.com/code/rcpp.armadillo.html">RcppArmadillo</a> package, and the recent <a href="https://rcppcore.github.io/RcppParallel/">RcppParallel</a> package, leveraging CPU multicore concurrency direct from compiled C++, R is a serious environment for numerical programming. A good introduction to RcppParallel is <a href="https://www.rstudio.com/resources/webinars/rcppparallel-a-toolkit-for-portable-high-performance-algorithms/">this talk</a>.</p>
+<p>A trivial example of how simple it is to deploy solutions in C++</p>
+<pre class="cpp"><code>#include &lt;Rcpp.h&gt;
+using namespace Rcpp;
+
+// [[Rcpp::plugins(&quot;cpp11&quot;)]]
+
+// [[Rcpp::export]]
+int i_sect(const IntegerVector&amp; x, const IntegerVector&amp; y ) {
+  std::unordered_set&lt;int&gt; s(x.begin(), x.end());
+  return std::count_if(y.begin(), y.end(), [&amp;](int k) {return s.find(k) != s.end();});
+}
+
+// [[Rcpp::export]]
+double i_prod(NumericVector&amp; x, NumericVector&amp; y) {
+  return std::inner_product(x.begin(), x.end(), y.begin(),0.0);
+}</code></pre>
+<pre class="r"><code>require(microbenchmark)
+x&lt;-runif(100000)
+microbenchmark(sum(x * x),i_prod(x,x))</code></pre>
+<p>Resulting in a 2x to 4x speed gain. While C++ provides performance benefits, making previously infeasible numerically intensive simulation tasks feasible, it also exposes data structures and algorithms to R.</p>
+<p><br></p>
+<p>Here is a simple template function to sort a vector relative to another. This is 2x as fast as the naive R method, and even faster for small vectors.</p>
+<pre class="cpp"><code>#include &lt;Rcpp.h&gt;
+using namespace Rcpp;
+
+// [[Rcpp::plugins(&quot;cpp11&quot;)]]
+
+template &lt;typename T, typename U&gt; void sorty(T&amp; a, U const x) {
+  std::sort(a.begin(), a.end(),
+            [&amp;x](int i, int j) -&gt; bool { return x[i] &gt; x[j]; });
+}
+
+// [[Rcpp::export]]
+NumericVector sort_by(NumericVector&amp; to_sort, NumericVector&amp; by){
+  IntegerVector toOrder = seq_len( by.size() )-1; //similar to std::iota, gives {0,1,2,..,by.size()-1}
+  sorty(toOrder,by);
+  return(to_sort[toOrder]);
+}</code></pre>
+<pre class="r"><code>a&lt;-rexp(1000,1)
+b&lt;-rnorm(1000,0,1)
+microbenchmark(a[order(b,decreasing = TRUE)],sort_by(a,b))</code></pre>
+<p><br></p>
+</div>
+<div id="deployment-shiny-and-knitr" class="section level2">
+<h2>Deployment: Shiny and Knitr</h2>
+<p><a href="https://shiny.rstudio.com/">Shiny</a> is a web application framework enabling the deployment of interactive R sessions over the web. <a href="https://yihui.name/knitr/">KnitR</a> is a dynamic report generator for R, allowing documents (html, latex, pdf, Word documents) to be built around users workflow in R and dynamically capture results from R computations. Combining these together with <a href="http://rmarkdown.rstudio.com/index.html">R Markdown</a> documents and RStudio notebooks, makes dissemination and deployment capabilities of R exceptionally strong.</p>
+<div id="stick-breaking-with-shiny" class="section level3">
+<h3>Stick breaking with Shiny</h3>
+<p>A Shiny interactive app to investigate the expected lengths of each of ordered <span class="math inline">\(n+1\)</span> segments of unit length stick. Tap the picture below to be taken to the Shiny app, or follow this <a href="https://chris-x.shinyapps.io/StickBreak/">link</a>.</p>
+<!--- this actually works--->
+<!-- <iframe src="https://chris-x.shinyapps.io/StickBreak/" style="border: none; width: 440px; height: 600px"></iframe> -->
+<p><a href="https://chris-x.shinyapps.io/StickBreak/"><img src="images/stick_io.jpg" alt="[Shiny app](https://chris-x.shinyapps.io/StickBreak/)" /></a></p>
+</div>
+</div>
+<div id="data-tidyverse-and-data.table" class="section level2">
+<h2>Data: tidyverse and data.table</h2>
+<p><a href="https://blog.rstudio.org/2016/09/15/tidyverse-1-0-0/">Tidyverse</a> is the term given to the suite of R packages that have significantly enhanced (to put it mildly) how one approaches the task of data analysis, data wrangling and data visualisation in R – compared to the <em>base R</em> workflow of <code>data.frame</code> and <code>plot</code>. While data frames are still a core feature of the language, and base R plot can plot almost anything (if you dedicate enough time to the task), the tidyverse philosophy significantly reduces the time (and effort) it takes to produce those <em>interesting</em> and <em>complex</em> analyses base R struggles with.</p>
+<p><a href="https://github.com/Rdatatable/data.table/wiki">Data.table</a> offers another replacement for base data frames, utilising <em>by-reference</em> operations on data, it is incredibly fast and efficient and can work with GB’s of data effortlessly. While dplyr (part of the tidyverse suite) offers a clean and consistent syntax - together with much improved performance over direct use of <code>data.frame</code> - data table should be considered where speed is important.</p>
+<p><br></p>
+</div>
+<div id="machine-learning" class="section level2">
+<h2>Machine learning</h2>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

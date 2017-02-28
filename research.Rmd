@@ -1,5 +1,5 @@
 ---
-title: "research"
+title: "Research"
 output:
  html_document:
   toc: true
@@ -14,7 +14,7 @@ library(igraph)
 ```
 <br>
 
-## Networks
+## Complex systems and networks
 
 ```{r networks, echo=FALSE}
 colfunc<-colorRampPalette(c("springgreen","purple4"))
