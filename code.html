@@ -15,7 +15,7 @@
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/lumen.min.css" rel="stylesheet" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
@@ -101,34 +101,34 @@ button.code-folding-btn:focus {
 <style type="text/css">
 /* padding for bootstrap navbar */
 body {
-  padding-top: 54px;
+  padding-top: 60px;
   padding-bottom: 40px;
 }
 /* offset scroll position for anchor links (for fixed navbar)  */
 .section h1 {
-  padding-top: 59px;
-  margin-top: -59px;
+  padding-top: 65px;
+  margin-top: -65px;
 }
 
 .section h2 {
-  padding-top: 59px;
-  margin-top: -59px;
+  padding-top: 65px;
+  margin-top: -65px;
 }
 .section h3 {
-  padding-top: 59px;
-  margin-top: -59px;
+  padding-top: 65px;
+  margin-top: -65px;
 }
 .section h4 {
-  padding-top: 59px;
-  margin-top: -59px;
+  padding-top: 65px;
+  margin-top: -65px;
 }
 .section h5 {
-  padding-top: 59px;
-  margin-top: -59px;
+  padding-top: 65px;
+  margin-top: -65px;
 }
 .section h6 {
-  padding-top: 59px;
-  margin-top: -59px;
+  padding-top: 65px;
+  margin-top: -65px;
 }
 </style>
 
@@ -325,12 +325,12 @@ div.tocify {
 <p>I have used R since 2003, where I picked it up for statistical computing (and applied statistics). While the core language has not changed too much since then, the R ecosystem (meaning: developer environments, language interoperability and extensions, packages and domain specific use-cases) has grown rapidly over the last few years.</p>
 <p>R is considered to be an <em>unconventional</em> programming language. While most beginners often think of it as a fancy statistical calculator, it is both a powerful and flexible language / scripting language for the more general R environment (similar to how VBA is a scripting language for Excel). Although this definition downplays many of R strengths - it is accurate. For casual R users, much of the advanced mechanisms are not immediately obvious: many new R users learn how to write and use (user-defined) functions quite quickly, without having to know <a href="https://kevinushey.github.io/blog/2015/11/22/what-is-a-function/">these details</a>, for instance.</p>
 <ul>
-<li>There are many <em>guides</em> to R on-line, and much of the basic syntax and functionality can be picked up using a combination of <em>doing</em>, and reading the source code, and (excellent) documentation of packages. A great book for newcomers to R is <a href="https://www.amazon.co.uk/Learning-R-Richard-Cotton/dp/1449357105/ref=sr_1_2?s=books&amp;ie=UTF8&amp;qid=1488064624&amp;sr=1-2">Learning R</a> by Richard Cotton. For intermediate users, or those interested in the more advanced features of R, Hadley Wickham’s <a href="http://adv-r.had.co.nz/">Advanced R</a> is hard to beat.</li>
+<li>There are many guides to R on-line, and much of the basic syntax and functionality can be picked up using a combination of <em>doing</em>, reading the source code and (excellent) documentation of packages. A great book for newcomers to R is <a href="https://www.amazon.co.uk/Learning-R-Richard-Cotton/dp/1449357105/ref=sr_1_2?s=books&amp;ie=UTF8&amp;qid=1488064624&amp;sr=1-2">Learning R</a> by Richard Cotton. For intermediate users, or those interested in the more advanced features of the language, Hadley Wickham’s <a href="http://adv-r.had.co.nz/">Advanced R</a> is hard to beat.</li>
 </ul>
 <div id="performance-integrated-r-c-via-rcpp" class="section level2">
 <h2>Performance: Integrated R &amp; C++ via Rcpp</h2>
-<p><a href="http://dirk.eddelbuettel.com/code/rcpp.html">Rcpp</a> is a R package enabling the <em>easy</em> use of compiled code within R. While R makes extensive use of compiled C and Fortran, inlcuding compiled code in packages and user-defined functions was, until now, <em>painful</em>. It is difficult to overstate how workflow in R is extended by Rcpp. Along with the optimised matrix operations of the <a href="http://arma.sourceforge.net/">Armadillo C++ library</a>, available to R through the <a href="http://dirk.eddelbuettel.com/code/rcpp.armadillo.html">RcppArmadillo</a> package, and the recent <a href="https://rcppcore.github.io/RcppParallel/">RcppParallel</a> package, leveraging CPU multicore concurrency direct from compiled C++, R is a serious environment for numerical programming. A good introduction to RcppParallel is <a href="https://www.rstudio.com/resources/webinars/rcppparallel-a-toolkit-for-portable-high-performance-algorithms/">this talk</a>.</p>
-<p>A trivial example of how simple it can be to deploy solutions in C++</p>
+<p><a href="http://dirk.eddelbuettel.com/code/rcpp.html">Rcpp</a> is a R package enabling the <em>easy</em> use of compiled code within R. While the R environment makes extensive use of compiled C and Fortran, inlcuding compiled code in packages and user-defined functions was, until now, <em>painful</em>. It is difficult to overstate how workflow in R is extended by Rcpp. Along with the optimised matrix operations of the <a href="http://arma.sourceforge.net/">Armadillo C++ library</a>, available to R through the <a href="http://dirk.eddelbuettel.com/code/rcpp.armadillo.html">RcppArmadillo</a> package, and the recent <a href="https://rcppcore.github.io/RcppParallel/">RcppParallel</a> package, leveraging CPU multicore concurrency direct from compiled C++, R is a serious environment for numerical programming. A good introduction to RcppParallel is <a href="https://www.rstudio.com/resources/webinars/rcppparallel-a-toolkit-for-portable-high-performance-algorithms/">this talk</a>.</p>
+<p>A trivial example of how simple it is to deploy solutions in C++</p>
 <pre class="cpp"><code>#include &lt;Rcpp.h&gt;
 using namespace Rcpp;
 
@@ -349,7 +349,7 @@ double i_prod(NumericVector&amp; x, NumericVector&amp; y) {
 <pre class="r"><code>require(microbenchmark)
 x&lt;-runif(100000)
 microbenchmark(sum(x * x),i_prod(x,x))</code></pre>
-<p>Resulting in a 2x to 4x speed gain. While C++ provides performance benefits, it also exposes data structures and algorithms to R, and makes feasible previously infeasible numerically intensive simulation tasks (as well as lots of other things).</p>
+<p>Resulting in a 2x to 4x speed gain. While C++ provides performance benefits, making previously infeasible numerically intensive simulation tasks feasible, it also exposes data structures and algorithms to R.</p>
 <p><br></p>
 <p>Here is a simple template function to sort a vector relative to another. This is 2x as fast as the naive R method, and even faster for small vectors.</p>
 <pre class="cpp"><code>#include &lt;Rcpp.h&gt;
@@ -393,8 +393,9 @@ microbenchmark(a[order(b,decreasing = TRUE)],sort_by(a,b))</code></pre>
 </div>
 <div id="python" class="section level1">
 <h1>Python</h1>
-<p>I first used <a href="https://www.python.org/">Python</a> in 2011, and use it when/where I can. Python is a simple and readable language to work with, and is sufficiently distinct from R and C++ to make learning and developing with it interesting and useful. Although not specifically designed for statistical data analysis, Python has excellent support for it, via the <a href="http://pandas.pydata.org/">pandas</a> data analysis library.</p>
+<p>I first used <a href="https://www.python.org/">Python</a> in 2011, and use it when/where I can. Python is a simple and readable language to work with, and is sufficiently distinct from R and C++ to make learning and developing with it interesting and useful. Although not specifically designed for statistical data analysis, Python has excellent support for it via the <a href="http://pandas.pydata.org/">pandas</a> data analysis library.</p>
 <p>For statistical / machine learning, the well-known <a href="http://scikit-learn.org/stable/">scikit-learn</a> is excellent, and there is Python support for deep learning via <a href="https://keras.io/">Keras</a> (running on theano or TensorFlow).</p>
+<p><br></p>
 </div>
 <div id="r-v-python" class="section level1">
 <h1>R v Python?</h1>

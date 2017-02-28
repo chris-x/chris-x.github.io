@@ -16,5 +16,5 @@ navbar:
 output_dir: "."
 output:
   html_document:
-    theme: lumen
+    theme: flatly
     highlight: textmate

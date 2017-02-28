@@ -1,6 +1,5 @@
 ---
 title: "Chris Wray"
-author: "[C Wray](https://chris-x.github.io/)"
 ---
 
 ```{r setup, include=FALSE}

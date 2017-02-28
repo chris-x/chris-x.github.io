@@ -33,13 +33,13 @@ I have used R since 2003, where I picked it up for statistical computing (and ap
 
 R is considered to be an *unconventional* programming language. While most beginners often think of it as a fancy statistical calculator, it is both a powerful and flexible language / scripting language for the more general R environment (similar to how VBA is a scripting language for Excel). Although this definition downplays many of R strengths - it is accurate. For casual R users, much of the advanced mechanisms are not immediately obvious: many new R users learn how to write and use (user-defined) functions quite quickly, without having to know [these details](https://kevinushey.github.io/blog/2015/11/22/what-is-a-function/), for instance.
 
-* There are many *guides* to R on-line, and much of the basic syntax and functionality can be picked up using a combination of *doing*, and reading the source code, and (excellent) documentation of packages. A great book for newcomers to R is [Learning R](https://www.amazon.co.uk/Learning-R-Richard-Cotton/dp/1449357105/ref=sr_1_2?s=books&ie=UTF8&qid=1488064624&sr=1-2) by Richard Cotton. For intermediate users, or those interested in the more advanced features of R, Hadley Wickham's [Advanced R](http://adv-r.had.co.nz/) is hard to beat. 
+* There are many guides to R on-line, and much of the basic syntax and functionality can be picked up using a combination of *doing*, reading the source code and (excellent) documentation of packages. A great book for newcomers to R is [Learning R](https://www.amazon.co.uk/Learning-R-Richard-Cotton/dp/1449357105/ref=sr_1_2?s=books&ie=UTF8&qid=1488064624&sr=1-2) by Richard Cotton. For intermediate users, or those interested in the more advanced features of the language, Hadley Wickham's [Advanced R](http://adv-r.had.co.nz/) is hard to beat. 
 
 ## Performance: Integrated R & C++ via Rcpp
 
-[Rcpp](http://dirk.eddelbuettel.com/code/rcpp.html) is a R package enabling the *easy* use of compiled code within R. While R makes extensive use of compiled C and Fortran, inlcuding compiled code in packages and user-defined functions was, until now, *painful*. It is difficult to overstate how workflow in R is extended by Rcpp. Along with the optimised matrix operations of the [Armadillo C++ library](http://arma.sourceforge.net/), available to R through the [RcppArmadillo](http://dirk.eddelbuettel.com/code/rcpp.armadillo.html) package, and the recent [RcppParallel](https://rcppcore.github.io/RcppParallel/) package, leveraging CPU multicore concurrency direct from compiled C++, R is a serious environment for numerical programming. A good introduction to RcppParallel is [this talk](https://www.rstudio.com/resources/webinars/rcppparallel-a-toolkit-for-portable-high-performance-algorithms/).
+[Rcpp](http://dirk.eddelbuettel.com/code/rcpp.html) is a R package enabling the *easy* use of compiled code within R. While the R environment makes extensive use of compiled C and Fortran, inlcuding compiled code in packages and user-defined functions was, until now, *painful*. It is difficult to overstate how workflow in R is extended by Rcpp. Along with the optimised matrix operations of the [Armadillo C++ library](http://arma.sourceforge.net/), available to R through the [RcppArmadillo](http://dirk.eddelbuettel.com/code/rcpp.armadillo.html) package, and the recent [RcppParallel](https://rcppcore.github.io/RcppParallel/) package, leveraging CPU multicore concurrency direct from compiled C++, R is a serious environment for numerical programming. A good introduction to RcppParallel is [this talk](https://www.rstudio.com/resources/webinars/rcppparallel-a-toolkit-for-portable-high-performance-algorithms/).
 
-A trivial example of how simple it can be to deploy solutions in C++ 
+A trivial example of how simple it is to deploy solutions in C++ 
 ```{r engine='Rcpp',eval=FALSE}
 #include <Rcpp.h>
 using namespace Rcpp;
@@ -64,7 +64,7 @@ require(microbenchmark)
 x<-runif(100000)
 microbenchmark(sum(x * x),i_prod(x,x))
 ```
-Resulting in a 2x to 4x speed gain. While C++ provides performance benefits, it also exposes data structures and algorithms to R, and makes feasible previously infeasible numerically intensive simulation tasks (as well as lots of other things).
+Resulting in a 2x to 4x speed gain. While C++ provides performance benefits, making previously infeasible numerically intensive simulation tasks feasible, it also exposes data structures and algorithms to R.
 
 <br>
 
@@ -119,10 +119,11 @@ A Shiny interactive app to investigate the expected lengths of each of ordered $
 
 # Python
 
-I first used [Python](https://www.python.org/) in 2011, and use it when/where I can. Python is a simple and readable language to work with, and is sufficiently distinct from R and C++ to make learning and developing with it interesting and useful. Although not specifically designed for statistical data analysis, Python has excellent support for it, via the [pandas](http://pandas.pydata.org/) data analysis library.
+I first used [Python](https://www.python.org/) in 2011, and use it when/where I can. Python is a simple and readable language to work with, and is sufficiently distinct from R and C++ to make learning and developing with it interesting and useful. Although not specifically designed for statistical data analysis, Python has excellent support for it via the [pandas](http://pandas.pydata.org/) data analysis library.
 
 For statistical / machine learning, the well-known [scikit-learn](http://scikit-learn.org/stable/) is excellent, and there is Python support for deep learning via [Keras](https://keras.io/) (running on theano or TensorFlow).
 
+<br>
 
 # R v Python?
 

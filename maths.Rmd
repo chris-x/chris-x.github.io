@@ -9,17 +9,15 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-library(viridis)
 library(visNetwork)
 library(igraph)
 ```
+<br>
 
 ## Networks
 
-Here are networks
 ```{r networks, echo=FALSE}
 colfunc<-colorRampPalette(c("springgreen","purple4"))
-
 
 iggB<-barabasi.game(60,1,directed=FALSE)
 V(iggB)$name=as.character((1:vcount(iggB)))
@@ -29,16 +27,11 @@ V(iggA)$name<-as.character(1:vcount(iggA))
 
 igg<-union(iggB, iggA)
 GEdge<-get.edgelist(igg)
-GEdgedf<-data.frame(from=GEdge[,1],to=GEdge[,2],weight=rep(1,nrow(GEdge)))
-GEdgedf$color<-rep("purple",nrow(GEdge))
+GEdgedf<-data.frame(from=GEdge[,1],to=GEdge[,2],weight=rep(1,nrow(GEdge)),color=rep("purple",nrow(GEdge)))
 
-Gnodes <- data.frame(id= as.numeric(V(igg)$name))
-Gnodes$value<-degree(igg)
-grps <- cut(Gnodes$value,breaks=10,labels=FALSE)
-Gnodes$color<-colfunc(10)[grps]
-
-#Gnodes$group <- cut(Gnodes$value,breaks=10,labels=FALSE)
-visNetwork(Gnodes,GEdgedf)
+DD<-degree(igg);
+Gnodes <- data.frame(id = as.numeric(V(igg)$name),value=DD,color=colfunc(10)[cut(DD,breaks=10,labels=FALSE)])
+visNetwork(Gnodes,GEdgedf,main = "scale-free network with geometric core") %>% visInteraction(dragView=FALSE,zoomView=FALSE)
 ```
 
 <!-- ![A small geometric network](images/net_geom.jpeg) -->
