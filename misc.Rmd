@@ -1,14 +1,9 @@
 ---
-title: "Links"
+title: "Other"
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
 > [Find me here](https://www.linkedin.com/in/chriswrayuk/)
-
-> [Campbell House](http://campbellhousepenang.com/) -- An exceptional boutique hotel in Penang, Malaysia
-
-> [Aggelos Consulting](http://www.aggelosconsulting.com/) -- independent strategic communications

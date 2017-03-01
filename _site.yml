@@ -21,9 +21,11 @@ navbar:
     - text: "Finance"
       href: Finance.html
     - text: "About"
-      icon: fa-info
+      icon: fa-envelope
       href: about.html
   right:
+    - icon: fa-linkedin-square
+      href: https://www.linkedin.com/in/chriswrayuk/
     - text: "Links"
       href: misc.html
 output_dir: "."
