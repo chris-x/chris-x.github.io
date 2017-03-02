@@ -13,7 +13,7 @@ library(microbenchmark)
 ```
 I mostly code in __R__, __R/C++__, __Python__ and __VBA__ depending upon the situation, purpose and need. I am  *language agnostic* (although I will vigorously avoid having to read/write Perl, if I can). At various times I have had reason to use __Java__ (mostly for agent-based modelling via the [MASON](http://cs.gmu.edu/~eclab/projects/mason/) framework), __SQL__ for data gathering and manipulation, and __Perl__ for basic scripting. 
 
-For specialised mathematical tasks I have used __Matlab__ and __Mathematica__ (and the intrguing [Wolfram language](http://www.wolfram.com/language/fast-introduction-for-programmers/en/)). I experimented with [Julia](http://julialang.org/), in its (very) early days. 
+For specialised mathematical tasks I have used __Matlab__ and __Mathematica__ (and the intriguing [Wolfram language](http://www.wolfram.com/language/fast-introduction-for-programmers/en/)). I experimented with [Julia](http://julialang.org/), in its (very) early days. 
 
 Languages I find interesting (for one or another reasons) but have not (yet) needed to use, are:
 
@@ -37,7 +37,7 @@ R is considered to be an *unconventional* programming language. While most begin
 
 ## Performance: Integrated R & C++ via Rcpp
 
-[Rcpp](http://dirk.eddelbuettel.com/code/rcpp.html) is a R package enabling the *easy* use of compiled code within R. While the R environment makes extensive use of compiled C and Fortran, inlcuding compiled code in packages and user-defined functions was, until now, *painful*. It is difficult to overstate how workflow in R is extended by Rcpp. Along with the optimised matrix operations of the [Armadillo C++ library](http://arma.sourceforge.net/), available to R through the [RcppArmadillo](http://dirk.eddelbuettel.com/code/rcpp.armadillo.html) package, and the recent [RcppParallel](https://rcppcore.github.io/RcppParallel/) package, leveraging CPU multicore concurrency direct from compiled C++, R is a serious environment for numerical programming. A good introduction to RcppParallel is [this talk](https://www.rstudio.com/resources/webinars/rcppparallel-a-toolkit-for-portable-high-performance-algorithms/).
+[Rcpp](http://dirk.eddelbuettel.com/code/rcpp.html) is a R package enabling the *easy* use of compiled code within R. While the R environment makes extensive use of compiled C and Fortran, including compiled code in packages and user-defined functions was, until now, *painful*. It is difficult to overstate how workflow in R is extended by Rcpp. Along with the optimised matrix operations of the [Armadillo C++ library](http://arma.sourceforge.net/), available to R through the [RcppArmadillo](http://dirk.eddelbuettel.com/code/rcpp.armadillo.html) package, and the recent [RcppParallel](https://rcppcore.github.io/RcppParallel/) package, leveraging CPU multi-core concurrency direct from compiled C++, R is a serious environment for numerical programming. A good introduction to RcppParallel is [this talk](https://www.rstudio.com/resources/webinars/rcppparallel-a-toolkit-for-portable-high-performance-algorithms/).
 
 A trivial example of how simple it is to deploy solutions in C++ 
 ```{r engine='Rcpp',eval=FALSE}
