@@ -1,5 +1,5 @@
 ---
-title: "Interesting"
+title: "Interesting challanges"
 output:
  html_document:
   toc: true
@@ -11,13 +11,25 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-These problems are challenging, but require only basic undergraduate mathematics, at most.
+These problems are challenging, but require only basic undergraduate mathematics, at most. Some are olympiad style questions, others are either classics, with origin unknown or from the Stanford and Putnam examinations.
 
 <br>
 
 # Random contractions
 
-Contractions example
+__Let $R(n)$ be a random draw of integers between 0 and $n − 1$, inclusive. I repeatedly
+apply $R$, starting at $10^{100}$. What is the expected number of repeated applications until
+I get zero.__
+
+Answer [here](pdfs/contract.pdf)
+
+# Counting products
+
+__Consider all 100 digit numbers, i.e. those between 0 to $10^{100}$ − 1, inclusive. For each
+number, take the product of non-zero digits (treat the product of digits of 0 as 1), and
+sum across all the numbers. What’s the last digit?__
+
+Answer [here](pdfs/prods.pdf)
 
 # Stick breaking
 
