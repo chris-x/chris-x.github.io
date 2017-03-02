@@ -32,4 +32,45 @@ visNetwork(Gnodes,GEdgedf,main = "scale-free network with geometric core") %>% v
 
 # Complex systems and networks
 
-I am primarily interested in complex systems and spreading processes on networks.
+I am primarily interested in complex systems and spreading processes on networks. As a naturally interdisciplinary field of research, tools I have worked with include
+<style>
+  .col2 {
+    columns: 2 150px;         /* number of columns and width in pixels*/
+    -webkit-columns: 2 150px; /* chrome, safari */
+    -moz-columns: 2 150px;    /* firefox */
+  }
+</style>
+
+<br>
+
+<div class="col2">
+
+- Graph and network theory
+- Stochastic and probabilistic analysis
+- Dynamical systems
+- Combinatorics
+
+- Simulation and computation
+- Agent-based models
+- Statistical physics
+- Percolation
+</div>
+<center>
+
+I am equally interested in applying my research to financial markets and in economic contexts.
+
+<br>
+
+# Selected Publications & reports
+
+- [Cascades on a stochastic pulse-coupled network](http://www.nature.com/articles/srep06355). Wray, C., Bishop, S. 2014
+
+- A mathematical framework for agent-based models. Wray, C., Knipl, D., Bishop, S. (2015 Working paper)
+
+- [A Financial Market Model Incorporating Herd Behaviour](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0151790). Wray, C., Bishop, S. 2016
+
+- Kinetics of social contagion on temporal interconnected networks. Wray, C., Knipl, D., Bishop, S., Kertész, J. (2017 Working paper)
+
+
+
+
