@@ -19,8 +19,14 @@ For statistical / machine learning, the well-known [scikit-learn](http://scikit-
 
 ## Machine learning
 
-ML here
+Keras example to be uploaded
+
+<br>
 
 ## R v Python?
 
 See [this excellent video](https://blog.dominodatalab.com/video-huge-debate-r-vs-python-data-science/) for a comparison of Python and R in terms of data science. The answer is, of course, both are excellent and neither one is perfect.
+
+<br>
+
+Under construction

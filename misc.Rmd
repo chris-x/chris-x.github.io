@@ -1,9 +1,32 @@
 ---
-title: "Other"
+title: ""
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+Under Construction
 
-> [Find me here](https://www.linkedin.com/in/chriswrayuk/)
+<br>
+
+# Academic projects I have worked on
+
+[CRISIS](http://www.crisis-economics.eu/)
+
+[CiMPLEX](https://www.cimplex-project.eu/)
+
+[BiGData](http://www2.warwick.ac.uk/fac/soc/wbs/subjects/bsci/research/projects/bigdata/)
+
+<br>
+
+# General 
+
+[INET](https://www.ineteconomics.org/)
+
+[Quantopian](https://www.quantopian.com/)
+
+[LinkedIn](https://www.linkedin.com/in/chriswrayuk/)
+
+
+
+Under Construction

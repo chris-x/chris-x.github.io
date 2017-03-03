@@ -6,4 +6,28 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-Finance here
+Under construction
+
+# Quant risk and Black-Scholes
+
+R app to be deployed via web 
+<br>
+ 
+# Using Python to produce a stock screen
+
+Python code to be uploaded
+<br>
+
+# Deep learning via Python and Keras
+
+Python code to be uploaded
+<br>
+
+# Neural networks with R and MXNet
+
+R app to be deployed via web 
+
+<br>
+
+Under construction
+

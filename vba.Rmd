@@ -7,5 +7,10 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+# Class modules, collections and dictionaries
 
-This is where VBA will go
+Example to be uploaded
+
+# Late binding: VBA $\rightarrow$ VBS
+
+Under construction
