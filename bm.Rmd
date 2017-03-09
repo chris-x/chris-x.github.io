@@ -11,4 +11,7 @@ knitr::opts_chunk$set(echo = TRUE)
 # C2 AQA 2010
 
 * Q2, Q4 <a href="pdfs/BM/q2_q4_2010_C2.pdf">pdf</a>
-
+* Q5 <a href="pdfs/BM/q5_2010_C2.pdf">pdf</a>
+* Q6 <a href="pdfs/BM/q6_2010_C2.pdf">pdf</a>
+* Q7 <a href="pdfs/BM/q7_2010_C2.pdf">pdf</a>
+* Q8 <a href="pdfs/BM/q8_2010_C2.pdf">pdf</a>
