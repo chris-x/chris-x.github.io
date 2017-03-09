@@ -15,3 +15,81 @@ knitr::opts_chunk$set(echo = TRUE)
 * Q6 <a href="pdfs/BM/q6_2010_C2.pdf">pdf</a>
 * Q7 <a href="pdfs/BM/q7_2010_C2.pdf">pdf</a>
 * Q8 <a href="pdfs/BM/q8_2010_C2.pdf">pdf</a>
+
+Topics to focus on:
+
+* Indices and logs
+* Graphs, curves and functions 
+* Series and limits
+
+These topics could reasonably be covered by self-study, although I am happy to go through them.
+
+* Integration
+* Expansions and binomial theorem
+
+<br>
+
+Here are some integration and binomial expansion questions for self-study. More can be found in your text book.
+
+<br>
+
+1. Show that 
+$\int 8\sqrt{x}\:dx=\frac{16}{3}x^{3/2}+C$
+
+<br>
+
+2. By computing $\int_{1}^{2} a x^{-2}\:dx=5$, show that the constant $a=10$
+
+<br>
+
+3. 
+
+a) Show that $\int x^{-4/3}\:dx=-3x^{-1/3}+C,$ where $C$ is the constant of integration. 
+
+b) Using this result, find the value of the constant $b$ that satisfies 
+\[b\int_{1}^{8} x^{-4/3}\:dx=6\]
+
+<br>
+
+4. Compute the value of $\int_{1}^{2}\frac{1}{x^{3}}-\frac{x^{3}}{4}\:dx$. What does this result say about the area(s) bounded by the graph of $y=\frac{1}{x^{3}}-\frac{x^{3}}{4}$, and the $x$-axis over the range $x=1$ to $x=2$?
+
+<br>
+
+5. By expanding brackets, show that $(1-x)^{2} +2x > 0$ for all $x$.
+
+<br>
+
+6. 
+
+a) By expanding the brackets show that $(1+x)^{2}=1+2x+x^{2}$
+
+
+b) By using the fact that 
+\[
+\frac{a^{2}}{y^{2}}=\left(\frac{a}{y}\right)^{2}
+\]
+make a suitable substitution for $x$, and deduce the values of $p$ and $q$ that satisfy
+\[
+\left(1-\frac{4}{y^{2}}\right)^{2}=1+\frac{p}{y^{2}}+\frac{q}{y^{4}}
+\]
+
+<br>
+
+7. 
+
+a) For $a$ a constant, by expanding the brackets show that $(a+x)^{3}=a^{3}+3a^{2}x+3ax^{2}+x^{3}$
+
+
+b) Use the result of part a) to compute
+\[
+\int_{0}^{1} (a+x)^{3}\:dx
+\]
+
+leaving your answer in terms of the __constant__ $a$.
+
+c) Hence, using the result to part b), find the three possible values of $a$ that satisfy
+
+
+\[
+\int_{0}^{1} (a+x)^{3}\:dx=\frac{1}{4}+\frac{a}{2}
+\]
