@@ -1,0 +1,27 @@
+---
+title: ""
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<br>
+
+# C2 AQA 2010
+
+[CRISIS](http://www.crisis-economics.eu/)
+
+[CiMPLEX](https://www.cimplex-project.eu/)
+
+[BiGData](http://www2.warwick.ac.uk/fac/soc/wbs/subjects/bsci/research/projects/bigdata/)
+
+<br>
+
+# General 
+
+[INET](https://www.ineteconomics.org/)
+
+[Quantopian](https://www.quantopian.com/)
+
+[LinkedIn](https://www.linkedin.com/in/chriswrayuk/)
