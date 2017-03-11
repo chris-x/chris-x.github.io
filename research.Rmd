@@ -12,7 +12,7 @@ knitr::opts_chunk$set(echo = TRUE)
 library(visNetwork)
 library(igraph)
 ```
-```{r networks, echo=FALSE}
+```{r networks, echo=FALSE,fig.retina=2}
 colfunc<-colorRampPalette(c("springgreen","purple4"))
 
 iggB<-barabasi.game(60,1,directed=FALSE)
