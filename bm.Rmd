@@ -396,5 +396,5 @@ Notice how performing $8^{1/3}$ first is easier than performing $8^{2}$ first. T
 
 <br>
 
-If you want to complete some exercises related to these for C1, I suggest pages 17,19,16,14 of this booklet
+If you want to complete some exercises related to these for C1, I suggest pages 14,16,17,19, of this booklet
 [AQA C1 booklet](http://douis.net/css/alevel/core_1/revision_guide_c1.pdf)
