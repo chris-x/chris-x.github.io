@@ -324,6 +324,69 @@ $(document).ready(function () {
 <p><span class="math display">\[
 \int_{0}^{1} (a+x)^{3}\:dx=\frac{1}{4}+\frac{a}{2}
 \]</span></p>
+<p><br></p>
+<p>Answer to 7</p>
+<ol style="list-style-type: lower-alpha">
+<li>Expand using binomial coefficients or by expanding brackets.</li>
+</ol>
+<p>Note1. You should be able to switch between the equivalent notations <span class="math display">\[
+^{n}C_{r}=\binom{n}{r}=\frac{n!}{r!(n-r)!}
+\]</span></p>
+<p>Note2. There are lots of helpful identities involving binomial coefficients. The most important for A level is to realise <span class="math display">\[
+\binom{n}{r}=\binom{n}{n-r}
+\]</span> To show this, we start on the right-hand side and end up with the left-hand side simply using the definition</p>
+<p><span class="math display">\[
+\binom{n}{n-r}=\frac{n!}{(n-r)!(n-n+r)!}=\frac{n!}{(n-r)!r!}=\binom{n}{r}
+\]</span></p>
+<p><strong>Answering the question</strong> Using binomial coefficents.</p>
+<p><span class="math display">\[
+(a+x)^{3}=\binom{3}{0}a^{3}x^{0}+\binom{3}{1}a^{2}x^{1}+\binom{3}{2}a^{1}x^{2}+\binom{3}{3}a^{0}x^{3}
+\]</span> First, <span class="math display">\[
+\binom{3}{0}=\frac{3!}{0!(3-0)!}=\frac{3!}{3!}=1 =\binom{3}{3}, \:\: \textrm{ by the above result (Note2)}
+\]</span> Similarly,</p>
+<p><span class="math display">\[
+\binom{3}{1}=\frac{3!}{1!(3-1)!}=\frac{3!}{2!}=3 =\binom{3}{2}, \:\: \textrm{ by the above result (Note2)}
+\]</span></p>
+<p><br></p>
+<p>Now we can simplify the terms in <span class="math inline">\((a+x)^{3}\)</span></p>
+<p><span class="math display">\[
+(a+x)^{3}=a^{3}+3a^{2}x+3ax^{2}+x^{3}
+\]</span></p>
+<p><br></p>
+<p>We can also expand the brackets</p>
+<span class="math display">\[\begin{align}
+(a+x)^{3}=(a+x)(a+x)^{2}&amp;=(a+x)(a^{2}+2ax+x^{2})\\
+&amp;=(a^{3}+2a^{2}x+ax^{2}+a^{2}x+2ax^{2}+x^{3})\\
+&amp;=a^{3}+3a^{2}x+3ax^{2}+x^{3}
+\end{align}\]</span>
+<p><br></p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li><span class="math display">\[\begin{align}
+\int_{0}^{1}(a+x)^{3}\:dx &amp;=\int_{0}^{1} a^{3}+3a^{2}x+3ax^{2}+x^{3}\:dx\\
+&amp;=\left[a^{3}x+3a^{2}\frac{x^{2}}{2}+3a\frac{x^{3}}{3}+\frac{x^{4}}{4}\right]^{1}_{0}\\
+&amp;=\left(a^{3}+3a^{2}\frac{1}{2}+3a\frac{1}{3}+\frac{1}{4}\right)-0\\
+&amp;=\left(a^{3}+\frac{3}{2}a^{2}+a+\frac{1}{4}\right)
+\end{align}\]</span></li>
+</ol>
+<p><br></p>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>Now we can solve the equation given</li>
+</ol>
+<p><span class="math display">\[
+\int_{0}^{1}(a+x)^{3}=\frac{1}{4}+\frac{a}{2}
+\]</span> Replacing the left-hand side <span class="math display">\[
+a^{3}+\frac{3}{2}a^{2}+a+\frac{1}{4}=\frac{1}{4}+\frac{a}{2}\\
+\implies  a^{3}+\frac{3}{2}a^{2}+\frac{a}{2}=0\\
+\implies a \left( a^{2}+\frac{3}{2}a+\frac{1}{2}\right)=0
+\]</span> So <span class="math inline">\(a=0\)</span>, or <span class="math display">\[
+a^{2}+\frac{3}{2}a+\frac{1}{2}=0\\
+\]</span></p>
+<p>Completing the square is probably the easiest method to use on this quadratic <span class="math display">\[
+a^{2}+\frac{3}{2}a+\frac{1}{2}=(a+\frac{3}{4})^{2}-\frac{9}{16}+\frac{8}{16}=0\\
+\implies (a+\frac{3}{4})^{2}=\frac{1}{16}\\
+\implies (a+\frac{3}{4})=\pm\sqrt{\frac{1}{16}}=\pm\frac{1}{4}\\
+\implies a=-\frac{3}{4}\pm\frac{1}{4}=\frac{-3\pm 1}{4}
+\]</span> So <span class="math inline">\(a=-1\)</span> and <span class="math inline">\(a=-1/2\)</span> from the quadratic. Together with <span class="math inline">\(a=0\)</span> these are the three possible values for <span class="math inline">\(a\)</span>.</p>
 </div>
 
 
