@@ -338,7 +338,8 @@ $(document).ready(function () {
 <p><span class="math display">\[
 \binom{n}{n-r}=\frac{n!}{(n-r)!(n-n+r)!}=\frac{n!}{(n-r)!r!}=\binom{n}{r}
 \]</span></p>
-<p><strong>Answering the question</strong> Using binomial coefficents.</p>
+<p><strong>Answering the question</strong></p>
+<p>Using binomial coefficents.</p>
 <p><span class="math display">\[
 (a+x)^{3}=\binom{3}{0}a^{3}x^{0}+\binom{3}{1}a^{2}x^{1}+\binom{3}{2}a^{1}x^{2}+\binom{3}{3}a^{0}x^{3}
 \]</span> First, <span class="math display">\[
@@ -370,7 +371,7 @@ $(document).ready(function () {
 </ol>
 <p><br></p>
 <ol start="3" style="list-style-type: lower-alpha">
-<li>Now we can solve the equation given</li>
+<li>Now we can solve the equation given as</li>
 </ol>
 <p><span class="math display">\[
 \int_{0}^{1}(a+x)^{3}=\frac{1}{4}+\frac{a}{2}
@@ -384,9 +385,147 @@ a^{2}+\frac{3}{2}a+\frac{1}{2}=0\\
 <p>Completing the square is probably the easiest method to use on this quadratic <span class="math display">\[
 a^{2}+\frac{3}{2}a+\frac{1}{2}=(a+\frac{3}{4})^{2}-\frac{9}{16}+\frac{8}{16}=0\\
 \implies (a+\frac{3}{4})^{2}=\frac{1}{16}\\
-\implies (a+\frac{3}{4})=\pm\sqrt{\frac{1}{16}}=\pm\frac{1}{4}\\
+\implies (a+\frac{3}{4})=\pm\sqrt{\frac{1}{16}}=\pm\frac{\sqrt{1}}{\sqrt{16}}=\pm\frac{1}{4}\\
 \implies a=-\frac{3}{4}\pm\frac{1}{4}=\frac{-3\pm 1}{4}
-\]</span> So <span class="math inline">\(a=-1\)</span> and <span class="math inline">\(a=-1/2\)</span> from the quadratic. Together with <span class="math inline">\(a=0\)</span> these are the three possible values for <span class="math inline">\(a\)</span>.</p>
+\]</span> So <span class="math inline">\(a=-1\)</span> and <span class="math inline">\(a=-1/2\)</span> from the quadratic. Together with <span class="math inline">\(a=0\)</span>, these are the three possible values for <span class="math inline">\(a\)</span>.</p>
+<p><br></p>
+<p><strong>Question 7 is important as it combines elements from many C1 and C2 topics. Known as `multi-step’ problems, it is the kind of harder question always asked in exams (typically at the end, but not always as 2014 shows). It contains: Binomial expansion, integration, indices, quadratics and the important case where the quadratic is hidden inside another related problem (here the integration). Keep practising it until you feel comfortable with all the steps, and can complete it without looking at my answer. I have put 2 more below.</strong></p>
+<p><br></p>
+<p>Using the same method as presented in Q7, solve <span class="math display">\[
+\int_{-1}^{1}(a-x)^{3}=a^{3}+3a^{2}
+\]</span> Step1. Expand (a-x)^{3} as a binomial sum.</p>
+<p>Step2. Carry out the integration on the binomial sum. Because we have limits on the integral, we expect our answer to be some function just involving the (unknown) constant <span class="math inline">\(a\)</span>.</p>
+<p>Step 3. Solve the equation (just like you solve a quadratic) by replacing the integral with the expression you found in step 2.</p>
+<p>Step 4. You now should just have an a polynomial in <span class="math inline">\(a\)</span> on the left-hand-side. Now you can simplify and solve the cubic equation, bringing all terms to one side and setting the right-hand-side to <span class="math inline">\(0\)</span>, to find the possible <span class="math inline">\(a\)</span> values. I am using simple cubics, as it is solving quadratics that is more important for C1/C2.</p>
+<p><strong>Answer:</strong> <span class="math inline">\(a=0, 1, 2\)</span></p>
+<p><br></p>
+<p>Here there is only one possible value for <span class="math inline">\(a\)</span>. This will also test your fractions manipulation. Solve,</p>
+<p><span class="math display">\[
+\int_{-1}^{0}\left(1-\frac{x}{a}\right)^{3}=1+\frac{1}{4a^{3}}, \quad \textrm{Where } a \neq 0
+\]</span></p>
+<p><strong>Answer:</strong> <span class="math inline">\(a=-2/3\)</span></p>
+<p><br></p>
+</div>
+<div id="fractions" class="section level1">
+<h1>Fractions</h1>
+<p>Here are some exercises to help cement the basics of indices and fractions. These are important as all C1/C2 questions depend upon a fluent handling of this area.</p>
+<ol style="list-style-type: decimal">
+<li>When we write <span class="math display">\[
+\frac{x}{4}
+\]</span></li>
+</ol>
+<p>We can also write this, using the same multiplication shorthand as learnt at GCSE. <span class="math display">\[
+\frac{x}{4}=\frac{1}{4} \times x=\frac{1}{4}(x)=\frac{1}{4}x
+\]</span> This is so, because of the laws of multiplying fractions. In general</p>
+<p><span class="math display">\[
+\frac{a}{b} \times \frac{x}{y}=\frac{a \times x}{b \times y}=\frac{ax}{by}
+\]</span></p>
+<p>Then, working backwards we can take <span class="math inline">\(a=1\)</span>, <span class="math inline">\(b=4\)</span> and <span class="math inline">\(y=1\)</span> and we obtain <span class="math display">\[
+\frac{x}{4}=\frac{1}{4}\frac{x}{1}=\frac{1}{4}x
+\]</span></p>
+<p><br></p>
+<ol start="2" style="list-style-type: decimal">
+<li>When we write <span class="math display">\[
+\frac{1}{\frac{2}{3}}
+\]</span></li>
+</ol>
+<p>We should immediately think this is very horrible. We should always try to simplify these sorts of fraction (in general avoid having more than one dividing bar in a fraction…). As discussed, this situation sometimes arises in integration.</p>
+<p>I will use algebra to show what is going on. We want to express this horrible fraction as a proper fraction. That is, as two numbers <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> such that</p>
+<p><span class="math display">\[
+\frac{1}{\frac{2}{3}}=\frac{a}{b}
+\]</span></p>
+<p>So now we can manipulate this. First multiply both sides by <span class="math inline">\(\frac{2}{3}\)</span>. This cancels the fraction on the left-hand side</p>
+<p><span class="math display">\[
+1=\frac{a}{b}\frac{2}{3}=\frac{2a}{3b} \quad \textrm{using the multiplication rule 1, above}
+\]</span></p>
+<p><br></p>
+<p>Now multiply both sides by 3 <span class="math display">\[
+3 \times 1 = \frac{2a}{3b}\times 3 =\frac{2a \times 3}{3b}=\frac{2a}{b}
+\]</span></p>
+<p>Now divide both sides by 2 <span class="math display">\[
+\frac{3 \times 1 }{2}=\frac{2a}{2b}=\frac{a}{b}
+\]</span></p>
+<p>And there is our answer (<span class="math inline">\(a=3\)</span> and <span class="math inline">\(b=2\)</span>). So</p>
+<p><span class="math display">\[
+\frac{1}{\frac{2}{3}}=\frac{3}{2}
+\]</span></p>
+<p>In general <span class="math display">\[
+\frac{x}{\frac{y}{z}}=x\frac{z}{y}
+\]</span></p>
+<p><strong>All the rules above carry through regardless if fractions are negative</strong></p>
+<ol start="3" style="list-style-type: decimal">
+<li>Remember:</li>
+</ol>
+<p><span class="math display">\[
+-\frac{a}{b}=\frac{-a}{b}=\frac{a}{-b}=-a\frac{1}{b}=a\frac{-1}{b}
+\]</span> All mean the same thing. We change where we put the minus sign, only to make cancellation clearer <span class="math display">\[
+\frac{-a}{-b}=\frac{a}{b} \quad \textrm{clearer than,} \quad -\frac{a}{-b}=\frac{a}{b}
+\]</span></p>
+</div>
+<div id="indices" class="section level1">
+<h1>Indices</h1>
+<p>These are especially important for C1/C2 - more so than at GCSE. It is important to work through textbook exercises for these, if you feel a little shaky on them, as they are so important for derivatives and integration.</p>
+<p><br></p>
+<ol start="4" style="list-style-type: decimal">
+<li>For any number <span class="math inline">\(a\)</span> (positive, negative, fraction, etc), we have:</li>
+</ol>
+<p><span class="math display">\[
+\left(\frac{x}{y}\right)^{a}=\frac{x^{a}}{y^{a}}, \quad \left(xy \right)^{a}=x^{a}y^{a}
+\]</span></p>
+<p>For example, we know <span class="math inline">\(2^{2}=4\)</span>. We also know <span class="math inline">\(8/4=2\)</span>. So, <span class="math display">\[
+2^{2}=\left(\frac{8}{4}\right)^{2}=\frac{8^{2}}{4^{2}}=\frac{64}{16}=\frac{2\times2\times2\times2\times2\times2}{2\times2\times2\times2}=2\times 2=4
+\]</span></p>
+<p>Similarly,</p>
+<p><span class="math display">\[
+\sqrt{2}=\sqrt{\left(\frac{8}{4}\right)}=\left(\frac{8}{4}\right)^{1/2}=\frac{8^{1/2}}{4^{1/2}}=\frac{(2\times 4)^{1/2}}{4^{1/2}}=\frac{2^{1/2}4^{1/2}}{4^{1/2}}=\frac{\sqrt{2}\sqrt{4}}{\sqrt{4}}=\sqrt{2}
+\]</span></p>
+<p><br></p>
+<ol start="5" style="list-style-type: decimal">
+<li>Fractions and differing indices</li>
+</ol>
+<p><span class="math display">\[
+\frac{x^{a}}{x^{b}}=x^{a-b}
+\]</span></p>
+<p>For example <span class="math display">\[
+\frac{x^{5}}{x^{2}}=\frac{x \times x \times x\times x\times x }{x \times x}=x \times x \times x=x^{3}=x^{5-2}
+\]</span></p>
+<p>This also explains negative indices</p>
+<p><span class="math display">\[
+\frac{x^{2}}{x^{3}}=\frac{x \times x}{x \times x \times x}=\frac{1}{x}=x^{2-3}=x^{-1}
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+\frac{x^{2}}{x^{5}}=\frac{x \times x}{x \times x \times x \times x \times x}=\frac{1}{x\times x\times x}=\frac{1}{x^{3}}=x^{2-5}=x^{-3}
+\]</span></p>
+<p>In general</p>
+<p><span class="math display">\[
+x^{-a}=\frac{1}{x^{a}} \quad \textrm{and, } \left(\frac{x}{y}\right)^{-a}=\left(\frac{y}{x}\right)^{a}
+\]</span></p>
+<ol start="6" style="list-style-type: decimal">
+<li>Multiplication of indices and fractional powers</li>
+</ol>
+<p>We write <span class="math display">\[
+x^{a \times b} = x^{ab}
+\]</span></p>
+<p>The best way to think of this is as <span class="math display">\[
+x^{ab}=\left(x^{a}\right)^{b}=\left(x^{b}\right)^{a}
+\]</span> Note we can compute the power in stages, in any order we like.</p>
+<p>For a fractional power (or rational power as it is also known), we make use of the multiplication rule. Let <span class="math inline">\(b\)</span> and <span class="math inline">\(d\)</span> be whole numbers, so that <span class="math inline">\(b/d\)</span> is a fraction then</p>
+<p><span class="math display">\[
+x^{b/d}=(x^b)^{1/d}=\sqrt[d]{x^{b}}
+\]</span></p>
+<p>Or we can this the other way around, too</p>
+<p><span class="math display">\[
+x^{b/d}=(x^{1/d})^{b}=\left(\sqrt[d]{x}\right)^{b}
+\]</span></p>
+<p>For example <span class="math display">\[
+8^{2/3}=(8^{1/3})^{2}=(2)^{2}=4
+\]</span> and <span class="math display">\[
+8^{2/3}=(8^{2})^{1/3}=(64)^{1/3}=\sqrt[3]{64}=4
+\]</span></p>
+<p>Notice how performing <span class="math inline">\(8^{1/3}\)</span> first is easier than performing <span class="math inline">\(8^{2}\)</span> first. This is often what guides us when deciding what operation to perform first.</p>
+<p><br></p>
+<p>If you want to complete some exercises related to these for C1, I suggest pages 17,19,16,14 of this booklet <a href="http://douis.net/css/alevel/core_1/revision_guide_c1.pdf">AQA C1 booklet</a></p>
 </div>
 
 
