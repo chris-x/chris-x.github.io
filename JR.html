@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title></title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-1.1/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-1.1/highlight.js"></script>
+<link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs && document.readyState && document.readyState === "complete") {
+   window.setTimeout(function() {
+      hljs.initHighlighting();
+   }, 0);
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+
+.section h2 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h3 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h4 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h5 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h6 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Chris Wray</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Maths
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="research.html">Research</a>
+    </li>
+    <li>
+      <a href="teaching.html">Teaching</a>
+    </li>
+    <li>
+      <a href="interesting.html">Interesting elementary challanges</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Code
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="r_cpp.html">R/C++</a>
+    </li>
+    <li>
+      <a href="py.html">Python</a>
+    </li>
+    <li>
+      <a href="vba.html">VBA</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="Finance.html">Finance</a>
+</li>
+<li>
+  <a href="about.html">
+    <span class="fa fa-envelope"></span>
+     
+    About
+  </a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://www.linkedin.com/in/chriswrayuk/">
+    <span class="fa fa-linkedin-square"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="misc.html">Links</a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+
+</div>
+
+
+<p><br></p>
+<div id="c1-c4-edexcel" class="section level1">
+<h1>C1-C4 EdExcel</h1>
+<p><br></p>
+<p>In the pdfs below, my comments / suggestions are in blue or surrounded by square brackets [].</p>
+<ul>
+<li>Q2, Q4 <a href="pdfs/BM/q2_q4_2010_C2.pdf">pdf</a></li>
+<li>Q5 <a href="pdfs/BM/q5_2010_C2.pdf">pdf</a></li>
+<li>Q6 <a href="pdfs/BM/q6_2010_C2.pdf">pdf</a></li>
+<li>Q7 <a href="pdfs/BM/q7_2010_C2.pdf">pdf</a></li>
+<li>Q8 <a href="pdfs/BM/q8_2010_C2.pdf">pdf</a></li>
+</ul>
+<p>Topics to focus on:</p>
+<ul>
+<li>Indices and logs</li>
+<li>Graphs, curves and functions</li>
+<li>Series and limits</li>
+</ul>
+<p>These two topics could reasonably be covered by self-study, although I am happy to go through them.</p>
+<ul>
+<li>Integration</li>
+<li>Expansions and binomial theorem</li>
+</ul>
+<p><br></p>
+<p>Here are some integration and binomial expansion questions for self-study. More can be found in your text book.</p>
+<p><br></p>
+<ol style="list-style-type: decimal">
+<li>Show that <span class="math inline">\(\int 8\sqrt{x}\:dx=\frac{16}{3}x^{3/2}+C\)</span></li>
+</ol>
+<p><br></p>
+<ol start="2" style="list-style-type: decimal">
+<li>By computing <span class="math inline">\(\int_{1}^{2} a x^{-2}\:dx=5\)</span>, show that the constant <span class="math inline">\(a=10\)</span></li>
+</ol>
+<p><br></p>
+<ol start="3" style="list-style-type: decimal">
+<li></li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li><p>Show that <span class="math inline">\(\int x^{-4/3}\:dx=-3x^{-1/3}+C,\)</span> where <span class="math inline">\(C\)</span> is the constant of integration.</p></li>
+<li><p>Using this result, find the value of the constant <span class="math inline">\(b\)</span> that satisfies <span class="math display">\[b\int_{1}^{8} x^{-4/3}\:dx=6\]</span></p></li>
+</ol>
+<p><br></p>
+<ol start="4" style="list-style-type: decimal">
+<li>Compute the value of <span class="math inline">\(\int_{1}^{2}\frac{1}{x^{3}}-\frac{x^{3}}{4}\:dx\)</span>. What does this result say about the area(s) bounded by the graph of <span class="math inline">\(y=\frac{1}{x^{3}}-\frac{x^{3}}{4}\)</span>, and the <span class="math inline">\(x\)</span>-axis over the range <span class="math inline">\(x=1\)</span> to <span class="math inline">\(x=2\)</span>?</li>
+</ol>
+<p><br></p>
+<ol start="5" style="list-style-type: decimal">
+<li>By expanding brackets, show that <span class="math inline">\((1-x)^{2} +2x &gt; 0\)</span> for all <span class="math inline">\(x\)</span>.</li>
+</ol>
+<p><br></p>
+<ol start="6" style="list-style-type: decimal">
+<li></li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li><p>By expanding the brackets show that <span class="math inline">\((1+x)^{2}=1+2x+x^{2}\)</span></p></li>
+<li><p>By using the fact that <span class="math display">\[
+\frac{a^{2}}{y^{2}}=\left(\frac{a}{y}\right)^{2}
+\]</span> make a suitable substitution for <span class="math inline">\(x\)</span>, and deduce the values of <span class="math inline">\(p\)</span> and <span class="math inline">\(q\)</span> that satisfy <span class="math display">\[
+\left(1-\frac{4}{y^{2}}\right)^{2}=1+\frac{p}{y^{2}}+\frac{q}{y^{4}}
+\]</span></p></li>
+</ol>
+<p><br></p>
+<ol start="7" style="list-style-type: decimal">
+<li></li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li><p>For <span class="math inline">\(a\)</span> a constant, by expanding the brackets show that <span class="math inline">\((a+x)^{3}=a^{3}+3a^{2}x+3ax^{2}+x^{3}\)</span></p></li>
+<li><p>Use the result of part a) to compute <span class="math display">\[
+\int_{0}^{1} (a+x)^{3}\:dx
+\]</span></p></li>
+</ol>
+<p>leaving your answer in terms of the <strong>constant</strong> <span class="math inline">\(a\)</span>.</p>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>Hence, using the result to part b), find the three possible values of <span class="math inline">\(a\)</span> that satisfy</li>
+</ol>
+<p><span class="math display">\[
+\int_{0}^{1} (a+x)^{3}\:dx=\frac{1}{4}+\frac{a}{2}
+\]</span></p>
+<p><br></p>
+<p>Answer to 7</p>
+<ol style="list-style-type: lower-alpha">
+<li>Expand using binomial coefficients or by expanding brackets.</li>
+</ol>
+<p>Note1. You should be able to switch between the equivalent notations <span class="math display">\[
+^{n}C_{r}=\binom{n}{r}=\frac{n!}{r!(n-r)!}
+\]</span></p>
+<p>Note2. There are lots of helpful identities involving binomial coefficients. The most important for A level is to realise <span class="math display">\[
+\binom{n}{r}=\binom{n}{n-r}
+\]</span> To show this, we start on the right-hand side and end up with the left-hand side simply using the definition</p>
+<p><span class="math display">\[
+\binom{n}{n-r}=\frac{n!}{(n-r)!(n-n+r)!}=\frac{n!}{(n-r)!r!}=\binom{n}{r}
+\]</span></p>
+<p><strong>Answering the question</strong></p>
+<p>Using binomial coefficents.</p>
+<p><span class="math display">\[
+(a+x)^{3}=\binom{3}{0}a^{3}x^{0}+\binom{3}{1}a^{2}x^{1}+\binom{3}{2}a^{1}x^{2}+\binom{3}{3}a^{0}x^{3}
+\]</span> First, <span class="math display">\[
+\binom{3}{0}=\frac{3!}{0!(3-0)!}=\frac{3!}{3!}=1 =\binom{3}{3}, \:\: \textrm{ by the above result (Note2)}
+\]</span> Similarly,</p>
+<p><span class="math display">\[
+\binom{3}{1}=\frac{3!}{1!(3-1)!}=\frac{3!}{2!}=3 =\binom{3}{2}, \:\: \textrm{ by the above result (Note2)}
+\]</span></p>
+<p><br></p>
+<p>Now we can simplify the terms in <span class="math inline">\((a+x)^{3}\)</span></p>
+<p><span class="math display">\[
+(a+x)^{3}=a^{3}+3a^{2}x+3ax^{2}+x^{3}
+\]</span></p>
+<p><br></p>
+<p>We can also expand the brackets</p>
+<span class="math display">\[\begin{align}
+(a+x)^{3}=(a+x)(a+x)^{2}&amp;=(a+x)(a^{2}+2ax+x^{2})\\
+&amp;=(a^{3}+2a^{2}x+ax^{2}+a^{2}x+2ax^{2}+x^{3})\\
+&amp;=a^{3}+3a^{2}x+3ax^{2}+x^{3}
+\end{align}\]</span>
+<p><br></p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li><span class="math display">\[\begin{align}
+\int_{0}^{1}(a+x)^{3}\:dx &amp;=\int_{0}^{1} a^{3}+3a^{2}x+3ax^{2}+x^{3}\:dx\\
+&amp;=\left[a^{3}x+3a^{2}\frac{x^{2}}{2}+3a\frac{x^{3}}{3}+\frac{x^{4}}{4}\right]^{1}_{0}\\
+&amp;=\left(a^{3}+3a^{2}\frac{1}{2}+3a\frac{1}{3}+\frac{1}{4}\right)-0\\
+&amp;=\left(a^{3}+\frac{3}{2}a^{2}+a+\frac{1}{4}\right)
+\end{align}\]</span></li>
+</ol>
+<p><br></p>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>Now we can solve the equation given as</li>
+</ol>
+<p><span class="math display">\[
+\int_{0}^{1}(a+x)^{3}=\frac{1}{4}+\frac{a}{2}
+\]</span> Replacing the left-hand side <span class="math display">\[
+a^{3}+\frac{3}{2}a^{2}+a+\frac{1}{4}=\frac{1}{4}+\frac{a}{2}\\
+\implies  a^{3}+\frac{3}{2}a^{2}+\frac{a}{2}=0\\
+\implies a \left( a^{2}+\frac{3}{2}a+\frac{1}{2}\right)=0
+\]</span> So <span class="math inline">\(a=0\)</span>, or <span class="math display">\[
+a^{2}+\frac{3}{2}a+\frac{1}{2}=0\\
+\]</span></p>
+<p>Completing the square is probably the easiest method to use on this quadratic <span class="math display">\[
+a^{2}+\frac{3}{2}a+\frac{1}{2}=(a+\frac{3}{4})^{2}-\frac{9}{16}+\frac{8}{16}=0\\
+\implies (a+\frac{3}{4})^{2}=\frac{1}{16}\\
+\implies (a+\frac{3}{4})=\pm\sqrt{\frac{1}{16}}=\pm\frac{\sqrt{1}}{\sqrt{16}}=\pm\frac{1}{4}\\
+\implies a=-\frac{3}{4}\pm\frac{1}{4}=\frac{-3\pm 1}{4}
+\]</span> So <span class="math inline">\(a=-1\)</span> and <span class="math inline">\(a=-1/2\)</span> from the quadratic. Together with <span class="math inline">\(a=0\)</span>, these are the three possible values for <span class="math inline">\(a\)</span>.</p>
+<p><br></p>
+<p><strong>Question 7 is important as it combines elements from many C1 and C2 topics. Known as `multi-step’ problems, it is the kind of harder question always asked in exams (typically at the end, but not always as 2014 shows). It contains: Binomial expansion, integration, indices, quadratics and the important case where the quadratic is hidden inside another related problem (here the integration). Keep practising it until you feel comfortable with all the steps, and can complete it without looking at my answer. I have put 2 more below.</strong></p>
+<p><br></p>
+<p>Using the same method as presented in Q7, solve <span class="math display">\[
+\int_{-1}^{1}(a-x)^{3}=a^{3}+3a^{2}
+\]</span> Step1. Expand (a-x)^{3} as a binomial sum.</p>
+<p>Step2. Carry out the integration on the binomial sum. Because we have limits on the integral, we expect our answer to be some function just involving the (unknown) constant <span class="math inline">\(a\)</span>.</p>
+<p>Step 3. Solve the equation (just like you solve a quadratic) by replacing the integral with the expression you found in step 2.</p>
+<p>Step 4. You now should just have an a polynomial in <span class="math inline">\(a\)</span> on the left-hand-side. Now you can simplify and solve the cubic equation, bringing all terms to one side and setting the right-hand-side to <span class="math inline">\(0\)</span>, to find the possible <span class="math inline">\(a\)</span> values. I am using simple cubics, as it is solving quadratics that is more important for C1/C2.</p>
+<p><strong>Answer:</strong> <span class="math inline">\(a=0, 1, 2\)</span></p>
+<p><br></p>
+<p>Here there is only one possible value for <span class="math inline">\(a\)</span>. This will also test your fractions manipulation. Solve,</p>
+<p><span class="math display">\[
+\int_{-1}^{0}\left(1-\frac{x}{a}\right)^{3}=1+\frac{1}{4a^{3}}, \quad \textrm{Where } a \neq 0
+\]</span></p>
+<p><strong>Answer:</strong> <span class="math inline">\(a=-2/3\)</span></p>
+<p><br></p>
+</div>
+<div id="fractions" class="section level1">
+<h1>Fractions</h1>
+<p>Here are some exercises to help cement the basics of indices and fractions. These are important as all C1/C2 questions depend upon a fluent handling of this area.</p>
+<ol style="list-style-type: decimal">
+<li>When we write <span class="math display">\[
+\frac{x}{4}
+\]</span></li>
+</ol>
+<p>We can also write this, using the same multiplication shorthand as learnt at GCSE. <span class="math display">\[
+\frac{x}{4}=\frac{1}{4} \times x=\frac{1}{4}(x)=\frac{1}{4}x
+\]</span> This is so, because of the laws of multiplying fractions. In general</p>
+<p><span class="math display">\[
+\frac{a}{b} \times \frac{x}{y}=\frac{a \times x}{b \times y}=\frac{ax}{by}
+\]</span></p>
+<p>Then, working backwards we can take <span class="math inline">\(a=1\)</span>, <span class="math inline">\(b=4\)</span> and <span class="math inline">\(y=1\)</span> and we obtain <span class="math display">\[
+\frac{x}{4}=\frac{1}{4}\frac{x}{1}=\frac{1}{4}x
+\]</span></p>
+<p><br></p>
+<ol start="2" style="list-style-type: decimal">
+<li>When we write <span class="math display">\[
+\frac{1}{\frac{2}{3}}
+\]</span></li>
+</ol>
+<p>We should immediately think this is very horrible. We should always try to simplify these sorts of fraction (in general avoid having more than one dividing bar in a fraction…). This situation sometimes arises in integration.</p>
+<p>I will use algebra to show what is going on. We want to express this horrible fraction as a proper fraction. That is, as two numbers <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> such that</p>
+<p><span class="math display">\[
+\frac{1}{\frac{2}{3}}=\frac{a}{b}
+\]</span></p>
+<p>So now we can manipulate this. First multiply both sides by <span class="math inline">\(\frac{2}{3}\)</span>. This cancels the fraction on the left-hand side</p>
+<p><span class="math display">\[
+1=\frac{a}{b}\frac{2}{3}=\frac{2a}{3b} \quad \textrm{using the multiplication rule 1, above}
+\]</span></p>
+<p><br></p>
+<p>Now multiply both sides by 3 <span class="math display">\[
+3 \times 1 = \frac{2a}{3b}\times 3 =\frac{2a \times 3}{3b}=\frac{2a}{b}
+\]</span></p>
+<p>Now divide both sides by 2 <span class="math display">\[
+\frac{3 \times 1 }{2}=\frac{2a}{2b}=\frac{a}{b}
+\]</span></p>
+<p>And there is our answer (<span class="math inline">\(a=3\)</span> and <span class="math inline">\(b=2\)</span>). So</p>
+<p><span class="math display">\[
+\frac{1}{\frac{2}{3}}=\frac{3}{2}
+\]</span></p>
+<p>In general <span class="math display">\[
+\frac{x}{\frac{y}{z}}=x\frac{z}{y}
+\]</span></p>
+<p><strong>All the rules above carry through regardless if fractions are negative</strong></p>
+<ol start="3" style="list-style-type: decimal">
+<li>Remember:</li>
+</ol>
+<p><span class="math display">\[
+-\frac{a}{b}=\frac{-a}{b}=\frac{a}{-b}=-a\frac{1}{b}=a\frac{-1}{b}
+\]</span> All mean the same thing. We change where we put the minus sign, only to make cancellation clearer <span class="math display">\[
+\frac{-a}{-b}=\frac{a}{b} \quad \textrm{clearer than,} \quad -\frac{a}{-b}=\frac{a}{b}
+\]</span></p>
+</div>
+<div id="indices" class="section level1">
+<h1>Indices</h1>
+<p>These are especially important for C1/C2 - more so than at GCSE. It is important to work through textbook exercises for these, if you feel a little shaky on them, as they are so important for derivatives and integration.</p>
+<p><br></p>
+<ol start="4" style="list-style-type: decimal">
+<li>For any number <span class="math inline">\(a\)</span> (positive, negative, fraction, etc), we have:</li>
+</ol>
+<p><span class="math display">\[
+\left(\frac{x}{y}\right)^{a}=\frac{x^{a}}{y^{a}}, \quad \left(xy \right)^{a}=x^{a}y^{a}
+\]</span></p>
+<p>For example, we know <span class="math inline">\(2^{2}=4\)</span>. We also know <span class="math inline">\(8/4=2\)</span>. So, <span class="math display">\[
+2^{2}=\left(\frac{8}{4}\right)^{2}=\frac{8^{2}}{4^{2}}=\frac{64}{16}=\frac{2\times2\times2\times2\times2\times2}{2\times2\times2\times2}=2\times 2=4
+\]</span></p>
+<p>Similarly,</p>
+<p><span class="math display">\[
+\sqrt{2}=\sqrt{\left(\frac{8}{4}\right)}=\left(\frac{8}{4}\right)^{1/2}=\frac{8^{1/2}}{4^{1/2}}=\frac{(2\times 4)^{1/2}}{4^{1/2}}=\frac{2^{1/2}4^{1/2}}{4^{1/2}}=\frac{\sqrt{2}\sqrt{4}}{\sqrt{4}}=\sqrt{2}
+\]</span></p>
+<p><br></p>
+<ol start="5" style="list-style-type: decimal">
+<li>Fractions and differing indices</li>
+</ol>
+<p><span class="math display">\[
+\frac{x^{a}}{x^{b}}=x^{a-b}
+\]</span></p>
+<p>For example <span class="math display">\[
+\frac{x^{5}}{x^{2}}=\frac{x \times x \times x\times x\times x }{x \times x}=x \times x \times x=x^{3}=x^{5-2}
+\]</span></p>
+<p>This also explains negative indices</p>
+<p><span class="math display">\[
+\frac{x^{2}}{x^{3}}=\frac{x \times x}{x \times x \times x}=\frac{1}{x}=x^{2-3}=x^{-1}
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+\frac{x^{2}}{x^{5}}=\frac{x \times x}{x \times x \times x \times x \times x}=\frac{1}{x\times x\times x}=\frac{1}{x^{3}}=x^{2-5}=x^{-3}
+\]</span></p>
+<p>In general</p>
+<p><span class="math display">\[
+x^{-a}=\frac{1}{x^{a}} \quad \textrm{and, } \left(\frac{x}{y}\right)^{-a}=\left(\frac{y}{x}\right)^{a}
+\]</span></p>
+<ol start="6" style="list-style-type: decimal">
+<li>Multiplication of indices and fractional powers</li>
+</ol>
+<p>We write <span class="math display">\[
+x^{a \times b} = x^{ab}
+\]</span></p>
+<p>The best way to think of this is as <span class="math display">\[
+x^{ab}=\left(x^{a}\right)^{b}=\left(x^{b}\right)^{a}
+\]</span> Note we can compute the power in stages, in any order we like.</p>
+<p>For a fractional power (or rational power as it is also known), we make use of the multiplication rule. Let <span class="math inline">\(b\)</span> and <span class="math inline">\(d\)</span> be whole numbers, so that <span class="math inline">\(b/d\)</span> is a fraction then</p>
+<p><span class="math display">\[
+x^{b/d}=(x^b)^{1/d}=\sqrt[d]{x^{b}}
+\]</span></p>
+<p>Or we can this the other way around, too</p>
+<p><span class="math display">\[
+x^{b/d}=(x^{1/d})^{b}=\left(\sqrt[d]{x}\right)^{b}
+\]</span></p>
+<p>For example <span class="math display">\[
+8^{2/3}=(8^{1/3})^{2}=(2)^{2}=4
+\]</span> and <span class="math display">\[
+8^{2/3}=(8^{2})^{1/3}=(64)^{1/3}=\sqrt[3]{64}=4
+\]</span></p>
+<p>Notice how performing <span class="math inline">\(8^{1/3}\)</span> first is easier than performing <span class="math inline">\(8^{2}\)</span> first. This is often what guides us when deciding what operation to perform first.</p>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
