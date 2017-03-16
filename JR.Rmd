@@ -22,7 +22,6 @@ In the pdfs below, my comments / suggestions are in blue or surrounded by square
 
 Topics to focus on:
 
-* Indices and logs
 * Graphs, curves and functions 
 * Series and limits
 
