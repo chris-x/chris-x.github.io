@@ -1,5 +1,5 @@
 ---
-title: "Interesting challanges"
+title: "Interesting challenges"
 output:
  html_document:
   toc: true
