@@ -8,7 +8,7 @@ navbar:
          href: research.html
        - text: "Teaching"
          href: teaching.html
-       - text: "Interesting elementary challanges"
+       - text: "Interesting elementary challenges"
          href: interesting.html
     - text: "Code"
       menu:
