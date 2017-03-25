@@ -12,27 +12,27 @@ knitr::opts_chunk$set(echo = TRUE)
 
 <br>
 
-In the pdfs below, my comments / suggestions are in blue or surrounded by square brackets [].
+In any handwritten notes, my comments / suggestions are in blue or surrounded by square brackets [].
 
-* Q2, Q4 <a href="pdfs/BM/q2_q4_2010_C2.pdf">pdf</a>
-* Q5 <a href="pdfs/BM/q5_2010_C2.pdf">pdf</a>
-* Q6 <a href="pdfs/BM/q6_2010_C2.pdf">pdf</a>
-* Q7 <a href="pdfs/BM/q7_2010_C2.pdf">pdf</a>
-* Q8 <a href="pdfs/BM/q8_2010_C2.pdf">pdf</a>
+Please take a look through C3 2014. I will go through this next time.
+
+[C3 2014](pdfs/JR/June_2014_C3_Edexcel.pdf) 
 
 Topics to focus on:
 
 * Graphs, curves and functions 
-* Series and limits
-
-These two topics could reasonably be covered by self-study, although I am happy to go through them.
-
 * Integration
-* Expansions and binomial theorem
+* Trig
+* Differentiation
+
+These two topics can be covered/started by self-study, although I will spend some time on these.
+
+* C4 Vectors
+* C2 Sequences and series
 
 <br>
 
-Here are some integration and binomial expansion questions for self-study. More can be found in your text book.
+Here are some integration and binomial expansion questions for self-study. More can be found in text books.
 
 <br>
 
@@ -192,7 +192,7 @@ So $a=-1$ and $a=-1/2$ from the quadratic. Together with $a=0$, these are the th
 
 <br>
 
-__Question 7 is important as it combines elements from many C1 and C2 topics. Known as `multi-step' problems, it is the kind of harder question always asked in exams (typically at the end, but not always as 2014 shows). It contains: Binomial expansion, integration, indices, quadratics and the important case where the quadratic is hidden inside another related problem (here the integration). Keep practising it until you feel comfortable with all the steps, and can complete it without looking at my answer. I have put 2 more below.__
+__Question 7 is important as it combines elements from many C1 and C2 topics. Known as `multi-step' problems, it is the kind of harder question always asked in exams (typically at the end, but not always). It contains: Binomial expansion, integration, indices, quadratics and the important case where the quadratic is hidden inside another related problem (here the integration). Keep practising it until you feel comfortable with all the steps, and can complete it without looking at my answer. I have put 2 more below.__
 
 <br>
 
@@ -221,6 +221,9 @@ Here there is only one possible value for $a$. This will also test your fraction
 __Answer:__ $a=-2/3$
 
 <br>
+
+#Basic Revision
+Often exam marks can be lost by forgetting how to perform simple manipulations (indices, fractions, etc). It is important to be solid in this area. Use the below, if you need to, to refresh your memory.
 
 #Fractions
 
