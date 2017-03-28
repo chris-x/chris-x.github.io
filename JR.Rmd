@@ -16,7 +16,8 @@ In any handwritten notes, my comments / suggestions are in blue or surrounded by
 
 Please take a look through C3 2014. I will go through this next time.
 
-[C3 2014](pdfs/JR/June_2014_C3_Edexcel.pdf) 
+Model answers
+[C3 2014](pdfs/JR/c3_june_2014_model_answers.pdf) 
 
 Topics to focus on:
 
@@ -30,7 +31,106 @@ These two topics can be covered/started by self-study, although I will spend som
 * C4 Vectors
 * C2 Sequences and series
 
+Topics to practice: Chain rule and product rule.
+
+For Q3 C3 2014, we used implicit differentiation. This comes from the chain rule. The easiest way to learn the chain rule is by using the $u$ substitution. 
+
+Say we are given a functon $y=g(x)$ where $g$ is complicated and we need to calculate the derivative $dy/dx$. Then applying the chain-rule is the same as expressing $f$ using two simpler functions: $u(x)$ and $f(u)$ before differentiating the function of a function.
+\[
+y=g(x) = f(u(x))
+\]
+
+First we practice making the $u$ substituion.
+
+1.
+\[
+y=(3x^{2}-5x)^3, \quad \textrm{take } u(x)=3x^{2}-5x, \: f(u)=u^{3}
+\]
+
+2.
+\[
+y=\sqrt{2x^{3}+x^{2}}, \quad \textrm{take } u(x)=2x^{3}+x^{2}, \: f(u)=\sqrt{u}
+\]
+
+To differentiate a function of a function, we use the __chain rule__. With the $u$ substition above, we can write the chain rule as
+\[
+\frac{dy}{dx}=\frac{dy}{du} \times \frac{du}{dx}
+\]
+
+Imagine the terms $dy,du,dx$ were just like normal fractions. Notice how the $du$ terms cancel, leaving $dy/dx$.
+With the chain rule - it is important to (where possible) check any differentiation results when __not using__ the chain rule.
+
+1. Compute $dy/dx$ when $y=(3x^{2}-5x)^3$.
+
+Method: chain rule
+\begin{align}
+&\textrm{Let } \:u=3x^{2}-5x \:\: \textrm{then }\: y=u^{3}\\
+&\textrm{using the chain rule: }\: \frac{dy}{dx}=\frac{dy}{du}\frac{du}{dx}\\
+& \frac{dy}{du}=3u^{2}, \quad \frac{du}{dx}=6x-5\\
+&\frac{dy}{dx}=3u^{2}(6x-5)=3(3x^{2}-5x)^{2}(6x-5)
+\end{align}
+If we expand this out we get $dy/dx=162x^5-675x^4+900x^3-375x^2$.
+
+Method: long-hand (expanding)
+\begin{align}
+&y=(3x^{2}-5x)^{3}=27x^6-135x^5+225x^4-125x^3\\
+&\textrm{differentiating term-by-term: }\\
+& \frac{dy}{dx}=(6)(27)x^{5}-(5)(135)x^{4}+(4)(225)x^{3}-(3)(125)x^{2}\\
+&\frac{dy}{dx}=162x^5-675x^4+900x^3-375x^2
+\end{align}
+
+So we see the chain rule gives us exactly the same answer. It is just easier to differentiate (rather than expanding and doing lots of algebra).
 <br>
+
+2. Compute $dy/dx$ when $y=\sqrt{2x+x^{2}}$.
+
+Method: chain rule
+\begin{align}
+&\textrm{Let } \:u=2x+x^{2} \:\: \textrm{then }\: y=u^{1/2}\\
+&\textrm{using the chain rule: }\: \frac{dy}{dx}=\frac{dy}{du}\frac{du}{dx}\\
+& \frac{dy}{du}=1/2u^{-1/2}, \quad \frac{du}{dx}=2+2x=2(1+x)\\
+&\frac{dy}{dx}=1/2u^{-1/2}2(1+x)=\frac{1+x}{\sqrt{2x+x^{2}}}
+\end{align}
+
+3. A special case of the chain rule is used when we are given $x$ in terms of $y$, and the equation cannot be rearranged as $y$ in terms of $x$ easily. For example
+$x=y+y^{1/3}-2y^{2}$ cannot (easily) be written with $y$ the subject ($y=...$). But we can still find $dy/dx$.
+
+__DO NOT NEED TO KNOW DERIVATION FOR EXAM__ - but helps understanding.
+
+__DO NEED TO KNOW RESULT__
+\begin{align}
+&x=f(y) \quad \textrm{take derivative wrt $x$ of BOTH sides}\\
+&\frac{dx}{dx}=\frac{d f(y)}{dx} \quad \textrm{y is really $y(x)$}\\
+& 1=\frac{d(f(y))}{dy}\frac{dy}{dx}\quad \textrm{by chain rule} \\\\
+&\frac{1}{\frac{d(f(y))}{dy}}=\frac{dy}{dx} \quad \textrm{But $f(y)=x$ so we can substitute this}\\\\
+&\frac{1}{\frac{dx}{dy}}=\frac{dy}{dx}
+\end{align}
+
+Using the example above find $dy/dx$ when $x=y+y^{1/3}-2y^{2}$
+\[
+\frac{dx}{dy}=1+(1/3)y^{-2/3}-4y \implies \frac{dy}{dx}=\frac{1}{1+(1/3)y^{-2/3}-4y}
+\]
+Sometimes we may be able to use the original equation to write $dy/dx$ in terms of $x$, but otherwise just leave it in terms of $y$.
+
+4. Differentiating $e^{f(x)}$ and $\log(f(x))$
+
+It is really important to learn these rules off by heart. These results just follow from the chain rule
+\begin{align}
+y=e^{f(x)}, \quad \textrm{then} \quad \frac{dy}{dx}=f^{\prime}(x)e^{f(x)}\\\\
+y=\log{f(x)}, \quad \textrm{then} \quad \frac{dy}{dx}=\frac{f^{\prime}(x)}{f(x)}\\
+\end{align}
+
+In particular, when $f(x)=x$ (then $f^{\prime}(x)=1$)
+\begin{align}
+y=e^{x}, \quad \textrm{then} \quad \frac{dy}{dx}=(1)e^{x}=e^{x}\\\\
+y=\log{x}, \quad \textrm{then} \quad \frac{dy}{dx}=\frac{1}{x}\\
+\end{align}
+
+I suggest attempting around 50% of the exercises in C3 text book, Chapter 8 (Exercises 8A to 8E, this includes product and quotient rules). I also suggest revisiting C2 chapter 3 to brush up on exponentials and logarithms: work through the __worked examples__ and do some exercises only if you feel you would benefit (optional).
+
+<br>
+
+__Binomial expansions and integration__
 
 Here are some integration and binomial expansion questions for self-study. More can be found in text books.
 

@@ -252,7 +252,7 @@ $(document).ready(function () {
 <p><br></p>
 <p>In any handwritten notes, my comments / suggestions are in blue or surrounded by square brackets [].</p>
 <p>Please take a look through C3 2014. I will go through this next time.</p>
-<p><a href="pdfs/JR/June_2014_C3_Edexcel.pdf">C3 2014</a></p>
+<p>Model answers <a href="pdfs/JR/c3_june_2014_model_answers.pdf">C3 2014</a></p>
 <p>Topics to focus on:</p>
 <ul>
 <li>Graphs, curves and functions</li>
@@ -265,7 +265,84 @@ $(document).ready(function () {
 <li>C4 Vectors</li>
 <li>C2 Sequences and series</li>
 </ul>
+<p>Topics to practice: Chain rule and product rule.</p>
+<p>For Q3 C3 2014, we used implicit differentiation. This comes from the chain rule. The easiest way to learn the chain rule is by using the <span class="math inline">\(u\)</span> substitution.</p>
+<p>Say we are given a functon <span class="math inline">\(y=g(x)\)</span> where <span class="math inline">\(g\)</span> is complicated and we need to calculate the derivative <span class="math inline">\(dy/dx\)</span>. Then applying the chain-rule is the same as expressing <span class="math inline">\(f\)</span> using two simpler functions: <span class="math inline">\(u(x)\)</span> and <span class="math inline">\(f(u)\)</span> before differentiating the function of a function. <span class="math display">\[
+y=g(x) = f(u(x))
+\]</span></p>
+<p>First we practice making the <span class="math inline">\(u\)</span> substituion.</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math display">\[
+y=(3x^{2}-5x)^3, \quad \textrm{take } u(x)=3x^{2}-5x, \: f(u)=u^{3}
+\]</span></p></li>
+<li><p><span class="math display">\[
+y=\sqrt{2x^{3}+x^{2}}, \quad \textrm{take } u(x)=2x^{3}+x^{2}, \: f(u)=\sqrt{u}
+\]</span></p></li>
+</ol>
+<p>To differentiate a function of a function, we use the <strong>chain rule</strong>. With the <span class="math inline">\(u\)</span> substition above, we can write the chain rule as <span class="math display">\[
+\frac{dy}{dx}=\frac{dy}{du} \times \frac{du}{dx}
+\]</span></p>
+<p>Imagine the terms <span class="math inline">\(dy,du,dx\)</span> were just like normal fractions. Notice how the <span class="math inline">\(du\)</span> terms cancel, leaving <span class="math inline">\(dy/dx\)</span>. With the chain rule - it is important to (where possible) check any differentiation results when <strong>not using</strong> the chain rule.</p>
+<ol style="list-style-type: decimal">
+<li>Compute <span class="math inline">\(dy/dx\)</span> when <span class="math inline">\(y=(3x^{2}-5x)^3\)</span>.</li>
+</ol>
+Method: chain rule
+<span class="math display">\[\begin{align}
+&amp;\textrm{Let } \:u=3x^{2}-5x \:\: \textrm{then }\: y=u^{3}\\
+&amp;\textrm{using the chain rule: }\: \frac{dy}{dx}=\frac{dy}{du}\frac{du}{dx}\\
+&amp; \frac{dy}{du}=3u^{2}, \quad \frac{du}{dx}=6x-5\\
+&amp;\frac{dy}{dx}=3u^{2}(6x-5)=3(3x^{2}-5x)^{2}(6x-5)
+\end{align}\]</span>
+<p>If we expand this out we get <span class="math inline">\(dy/dx=162x^5-675x^4+900x^3-375x^2\)</span>.</p>
+Method: long-hand (expanding)
+<span class="math display">\[\begin{align}
+&amp;y=(3x^{2}-5x)^{3}=27x^6-135x^5+225x^4-125x^3\\
+&amp;\textrm{differentiating term-by-term: }\\
+&amp; \frac{dy}{dx}=(6)(27)x^{5}-(5)(135)x^{4}+(4)(225)x^{3}-(3)(125)x^{2}\\
+&amp;\frac{dy}{dx}=162x^5-675x^4+900x^3-375x^2
+\end{align}\]</span>
+<p>So we see the chain rule gives us exactly the same answer. It is just easier to differentiate (rather than expanding and doing lots of algebra). <br></p>
+<ol start="2" style="list-style-type: decimal">
+<li>Compute <span class="math inline">\(dy/dx\)</span> when <span class="math inline">\(y=\sqrt{2x+x^{2}}\)</span>.</li>
+</ol>
+Method: chain rule
+<span class="math display">\[\begin{align}
+&amp;\textrm{Let } \:u=2x+x^{2} \:\: \textrm{then }\: y=u^{1/2}\\
+&amp;\textrm{using the chain rule: }\: \frac{dy}{dx}=\frac{dy}{du}\frac{du}{dx}\\
+&amp; \frac{dy}{du}=1/2u^{-1/2}, \quad \frac{du}{dx}=2+2x=2(1+x)\\
+&amp;\frac{dy}{dx}=1/2u^{-1/2}2(1+x)=\frac{1+x}{\sqrt{2x+x^{2}}}
+\end{align}\]</span>
+<ol start="3" style="list-style-type: decimal">
+<li>A special case of the chain rule is used when we are given <span class="math inline">\(x\)</span> in terms of <span class="math inline">\(y\)</span>, and the equation cannot be rearranged as <span class="math inline">\(y\)</span> in terms of <span class="math inline">\(x\)</span> easily. For example <span class="math inline">\(x=y+y^{1/3}-2y^{2}\)</span> cannot (easily) be written with <span class="math inline">\(y\)</span> the subject (<span class="math inline">\(y=...\)</span>). But we can still find <span class="math inline">\(dy/dx\)</span>.</li>
+</ol>
+<p><strong>DO NOT NEED TO KNOW DERIVATION FOR EXAM</strong> - but helps understanding.</p>
+<strong>DO NEED TO KNOW RESULT</strong>
+<span class="math display">\[\begin{align}
+&amp;x=f(y) \quad \textrm{take derivative wrt $x$ of BOTH sides}\\
+&amp;\frac{dx}{dx}=\frac{d f(y)}{dx} \quad \textrm{y is really $y(x)$}\\
+&amp; 1=\frac{d(f(y))}{dy}\frac{dy}{dx}\quad \textrm{by chain rule} \\\\
+&amp;\frac{1}{\frac{d(f(y))}{dy}}=\frac{dy}{dx} \quad \textrm{But $f(y)=x$ so we can substitute this}\\\\
+&amp;\frac{1}{\frac{dx}{dy}}=\frac{dy}{dx}
+\end{align}\]</span>
+<p>Using the example above find <span class="math inline">\(dy/dx\)</span> when <span class="math inline">\(x=y+y^{1/3}-2y^{2}\)</span> <span class="math display">\[
+\frac{dx}{dy}=1+(1/3)y^{-2/3}-4y \implies \frac{dy}{dx}=\frac{1}{1+(1/3)y^{-2/3}-4y}
+\]</span> Sometimes we may be able to use the original equation to write <span class="math inline">\(dy/dx\)</span> in terms of <span class="math inline">\(x\)</span>, but otherwise just leave it in terms of <span class="math inline">\(y\)</span>.</p>
+<ol start="4" style="list-style-type: decimal">
+<li>Differentiating <span class="math inline">\(e^{f(x)}\)</span> and <span class="math inline">\(\log(f(x))\)</span></li>
+</ol>
+It is really important to learn these rules off by heart. These results just follow from the chain rule
+<span class="math display">\[\begin{align}
+y=e^{f(x)}, \quad \textrm{then} \quad \frac{dy}{dx}=f^{\prime}(x)e^{f(x)}\\\\
+y=\log{f(x)}, \quad \textrm{then} \quad \frac{dy}{dx}=\frac{f^{\prime}(x)}{f(x)}\\
+\end{align}\]</span>
+In particular, when <span class="math inline">\(f(x)=x\)</span> (then <span class="math inline">\(f^{\prime}(x)=1\)</span>)
+<span class="math display">\[\begin{align}
+y=e^{x}, \quad \textrm{then} \quad \frac{dy}{dx}=(1)e^{x}=e^{x}\\\\
+y=\log{x}, \quad \textrm{then} \quad \frac{dy}{dx}=\frac{1}{x}\\
+\end{align}\]</span>
+<p>I suggest attempting around 50% of the exercises in C3 text book, Chapter 8 (Exercises 8A to 8E, this includes product and quotient rules). I also suggest revisiting C2 chapter 3 to brush up on exponentials and logarithms: work through the <strong>worked examples</strong> and do some exercises only if you feel you would benefit (optional).</p>
 <p><br></p>
+<p><strong>Binomial expansions and integration</strong></p>
 <p>Here are some integration and binomial expansion questions for self-study. More can be found in text books.</p>
 <p><br></p>
 <ol style="list-style-type: decimal">
