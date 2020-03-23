@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
-<meta charset="utf-8">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta charset="utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
 
-<title></title>
+<title>JR.utf8</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -20,9 +20,10 @@
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/highlightjs-1.1/textmate.css" rel="stylesheet" />
-<script src="site_libs/highlightjs-1.1/highlight.js"></script>
-<link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -31,10 +32,12 @@
   }
 </style>
 <script type="text/javascript">
-if (window.hljs && document.readyState && document.readyState === "complete") {
-   window.setTimeout(function() {
-      hljs.initHighlighting();
-   }, 0);
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
 }
 </script>
 
@@ -68,9 +71,7 @@ h6 {
 </style>
 
 
-</head>
 
-<body>
 
 <style type = "text/css">
 .main-container {
@@ -84,13 +85,18 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
 }
+.html-widget {
+  margin-bottom: 20px;
+}
 button.code-folding-btn:focus {
   outline: none;
+}
+summary {
+  display: list-item;
 }
 </style>
 
@@ -106,7 +112,6 @@ body {
   padding-top: 65px;
   margin-top: -65px;
 }
-
 .section h2 {
   padding-top: 65px;
   margin-top: -65px;
@@ -126,6 +131,43 @@ body {
 .section h6 {
   padding-top: 65px;
   margin-top: -65px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
 }
 </style>
 
@@ -147,19 +189,74 @@ $(document).ready(function () {
 });
 </script>
 
-
-<div class="container-fluid main-container">
-
 <!-- tabsets -->
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-</script>
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
 
 <!-- code folding -->
 
 
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
 
 
 
@@ -286,60 +383,53 @@ y=\sqrt{2x^{3}+x^{2}}, \quad \textrm{take } u(x)=2x^{3}+x^{2}, \: f(u)=\sqrt{u}
 <ol style="list-style-type: decimal">
 <li>Compute <span class="math inline">\(dy/dx\)</span> when <span class="math inline">\(y=(3x^{2}-5x)^3\)</span>.</li>
 </ol>
-Method: chain rule
-<span class="math display">\[\begin{align}
+<p>Method: chain rule <span class="math display">\[\begin{align}
 &amp;\textrm{Let } \:u=3x^{2}-5x \:\: \textrm{then }\: y=u^{3}\\
 &amp;\textrm{using the chain rule: }\: \frac{dy}{dx}=\frac{dy}{du}\frac{du}{dx}\\
 &amp; \frac{dy}{du}=3u^{2}, \quad \frac{du}{dx}=6x-5\\
 &amp;\frac{dy}{dx}=3u^{2}(6x-5)=3(3x^{2}-5x)^{2}(6x-5)
-\end{align}\]</span>
-<p>If we expand this out we get <span class="math inline">\(dy/dx=162x^5-675x^4+900x^3-375x^2\)</span>.</p>
-Method: long-hand (expanding)
-<span class="math display">\[\begin{align}
+\end{align}\]</span> If we expand this out we get <span class="math inline">\(dy/dx=162x^5-675x^4+900x^3-375x^2\)</span>.</p>
+<p>Method: long-hand (expanding) <span class="math display">\[\begin{align}
 &amp;y=(3x^{2}-5x)^{3}=27x^6-135x^5+225x^4-125x^3\\
 &amp;\textrm{differentiating term-by-term: }\\
 &amp; \frac{dy}{dx}=(6)(27)x^{5}-(5)(135)x^{4}+(4)(225)x^{3}-(3)(125)x^{2}\\
 &amp;\frac{dy}{dx}=162x^5-675x^4+900x^3-375x^2
-\end{align}\]</span>
+\end{align}\]</span></p>
 <p>So we see the chain rule gives us exactly the same answer. It is just easier to differentiate (rather than expanding and doing lots of algebra). <br></p>
 <ol start="2" style="list-style-type: decimal">
 <li>Compute <span class="math inline">\(dy/dx\)</span> when <span class="math inline">\(y=\sqrt{2x+x^{2}}\)</span>.</li>
 </ol>
-Method: chain rule
-<span class="math display">\[\begin{align}
+<p>Method: chain rule <span class="math display">\[\begin{align}
 &amp;\textrm{Let } \:u=2x+x^{2} \:\: \textrm{then }\: y=u^{1/2}\\
 &amp;\textrm{using the chain rule: }\: \frac{dy}{dx}=\frac{dy}{du}\frac{du}{dx}\\
 &amp; \frac{dy}{du}=1/2u^{-1/2}, \quad \frac{du}{dx}=2+2x=2(1+x)\\
 &amp;\frac{dy}{dx}=1/2u^{-1/2}2(1+x)=\frac{1+x}{\sqrt{2x+x^{2}}}
-\end{align}\]</span>
+\end{align}\]</span></p>
 <ol start="3" style="list-style-type: decimal">
 <li>A special case of the chain rule is used when we are given <span class="math inline">\(x\)</span> in terms of <span class="math inline">\(y\)</span>, and the equation cannot be rearranged as <span class="math inline">\(y\)</span> in terms of <span class="math inline">\(x\)</span> easily. For example <span class="math inline">\(x=y+y^{1/3}-2y^{2}\)</span> cannot (easily) be written with <span class="math inline">\(y\)</span> the subject (<span class="math inline">\(y=...\)</span>). But we can still find <span class="math inline">\(dy/dx\)</span>.</li>
 </ol>
 <p><strong>DO NOT NEED TO KNOW DERIVATION FOR EXAM</strong> - but helps understanding.</p>
-<strong>DO NEED TO KNOW RESULT</strong>
-<span class="math display">\[\begin{align}
+<p><strong>DO NEED TO KNOW RESULT</strong> <span class="math display">\[\begin{align}
 &amp;x=f(y) \quad \textrm{take derivative wrt $x$ of BOTH sides}\\
 &amp;\frac{dx}{dx}=\frac{d f(y)}{dx} \quad \textrm{y is really $y(x)$}\\
 &amp; 1=\frac{d(f(y))}{dy}\frac{dy}{dx}\quad \textrm{by chain rule} \\\\
 &amp;\frac{1}{\frac{d(f(y))}{dy}}=\frac{dy}{dx} \quad \textrm{But $f(y)=x$ so we can substitute this}\\\\
 &amp;\frac{1}{\frac{dx}{dy}}=\frac{dy}{dx}
-\end{align}\]</span>
+\end{align}\]</span></p>
 <p>Using the example above find <span class="math inline">\(dy/dx\)</span> when <span class="math inline">\(x=y+y^{1/3}-2y^{2}\)</span> <span class="math display">\[
 \frac{dx}{dy}=1+(1/3)y^{-2/3}-4y \implies \frac{dy}{dx}=\frac{1}{1+(1/3)y^{-2/3}-4y}
 \]</span> Sometimes we may be able to use the original equation to write <span class="math inline">\(dy/dx\)</span> in terms of <span class="math inline">\(x\)</span>, but otherwise just leave it in terms of <span class="math inline">\(y\)</span>.</p>
 <ol start="4" style="list-style-type: decimal">
 <li>Differentiating <span class="math inline">\(e^{f(x)}\)</span> and <span class="math inline">\(\log(f(x))\)</span></li>
 </ol>
-It is really important to learn these rules off by heart. These results just follow from the chain rule
-<span class="math display">\[\begin{align}
+<p>It is really important to learn these rules off by heart. These results just follow from the chain rule <span class="math display">\[\begin{align}
 y=e^{f(x)}, \quad \textrm{then} \quad \frac{dy}{dx}=f^{\prime}(x)e^{f(x)}\\\\
 y=\log{f(x)}, \quad \textrm{then} \quad \frac{dy}{dx}=\frac{f^{\prime}(x)}{f(x)}\\
-\end{align}\]</span>
-In particular, when <span class="math inline">\(f(x)=x\)</span> (then <span class="math inline">\(f^{\prime}(x)=1\)</span>)
-<span class="math display">\[\begin{align}
+\end{align}\]</span></p>
+<p>In particular, when <span class="math inline">\(f(x)=x\)</span> (then <span class="math inline">\(f^{\prime}(x)=1\)</span>) <span class="math display">\[\begin{align}
 y=e^{x}, \quad \textrm{then} \quad \frac{dy}{dx}=(1)e^{x}=e^{x}\\\\
 y=\log{x}, \quad \textrm{then} \quad \frac{dy}{dx}=\frac{1}{x}\\
-\end{align}\]</span>
+\end{align}\]</span></p>
 <p>I suggest attempting around 50% of the exercises in C3 text book, Chapter 8 (Exercises 8A to 8E, this includes product and quotient rules). I also suggest revisiting C2 chapter 3 to brush up on exponentials and logarithms: work through the <strong>worked examples</strong> and do some exercises only if you feel you would benefit (optional).</p>
 <p><br></p>
 <p><strong>Binomial expansions and integration</strong></p>
@@ -428,11 +518,11 @@ y=\log{x}, \quad \textrm{then} \quad \frac{dy}{dx}=\frac{1}{x}\\
 \]</span></p>
 <p><br></p>
 <p>We can also expand the brackets</p>
-<span class="math display">\[\begin{align}
+<p><span class="math display">\[\begin{align}
 (a+x)^{3}=(a+x)(a+x)^{2}&amp;=(a+x)(a^{2}+2ax+x^{2})\\
 &amp;=(a^{3}+2a^{2}x+ax^{2}+a^{2}x+2ax^{2}+x^{3})\\
 &amp;=a^{3}+3a^{2}x+3ax^{2}+x^{3}
-\end{align}\]</span>
+\end{align}\]</span></p>
 <p><br></p>
 <ol start="2" style="list-style-type: lower-alpha">
 <li><span class="math display">\[\begin{align}
@@ -478,13 +568,8 @@ a^{2}+\frac{3}{2}a+\frac{1}{2}=(a+\frac{3}{4})^{2}-\frac{9}{16}+\frac{8}{16}=0\\
 \]</span></p>
 <p><strong>Answer:</strong> <span class="math inline">\(a=-2/3\)</span></p>
 <p><br></p>
-</div>
-<div id="basic-revision" class="section level1">
-<h1>Basic Revision</h1>
-<p>Often exam marks can be lost by forgetting how to perform simple manipulations (indices, fractions, etc). It is important to be solid in this area. Use the below, if you need to, to refresh your memory.</p>
-</div>
-<div id="fractions" class="section level1">
-<h1>Fractions</h1>
+<p>#Basic Revision Often exam marks can be lost by forgetting how to perform simple manipulations (indices, fractions, etc). It is important to be solid in this area. Use the below, if you need to, to refresh your memory.</p>
+<p>#Fractions</p>
 <p>Here are some exercises to help cement the basics of indices and fractions. These are important as all C1/C2 questions depend upon a fluent handling of this area.</p>
 <ol style="list-style-type: decimal">
 <li>When we write <span class="math display">\[
@@ -538,9 +623,7 @@ a^{2}+\frac{3}{2}a+\frac{1}{2}=(a+\frac{3}{4})^{2}-\frac{9}{16}+\frac{8}{16}=0\\
 \]</span> All mean the same thing. We change where we put the minus sign, only to make cancellation clearer <span class="math display">\[
 \frac{-a}{-b}=\frac{a}{b} \quad \textrm{clearer than,} \quad -\frac{a}{-b}=\frac{a}{b}
 \]</span></p>
-</div>
-<div id="indices" class="section level1">
-<h1>Indices</h1>
+<p>#Indices</p>
 <p>These are especially important for C1/C2 - more so than at GCSE. It is important to work through textbook exercises for these, if you feel a little shaky on them, as they are so important for derivatives and integration.</p>
 <p><br></p>
 <ol start="4" style="list-style-type: decimal">
@@ -621,12 +704,29 @@ $(document).ready(function () {
 
 </script>
 
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
     document.getElementsByTagName("head")[0].appendChild(script);
   })();
 </script>
