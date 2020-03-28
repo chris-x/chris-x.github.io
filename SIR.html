@@ -11,7 +11,7 @@
 
 
 
-<title></title>
+<title>COVID-19 2020</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -342,23 +342,31 @@ $(document).ready(function () {
 
 
 
+<h1 class="title toc-ignore">COVID-19 2020</h1>
+<h4 class="date">27/03/2020</h4>
 
 </div>
 
 
-<p><br></p>
-<div id="academic-projects-i-have-worked-on" class="section level1">
-<h1>Academic projects I have worked on</h1>
-<p><a href="http://www.crisis-economics.eu/">CRISIS</a></p>
-<p><a href="https://www.cimplex-project.eu/">CiMPLEX</a></p>
-<p><a href="http://www2.warwick.ac.uk/fac/soc/wbs/subjects/bsci/research/projects/bigdata/">BiGData</a></p>
-<p><br></p>
+<div id="sir-models" class="section level2">
+<h2>SIR models</h2>
+<p>The prototypical model for how a contagious disease spreads throughout a population was introduced in a 1927 <a href="https://royalsocietypublishing.org/doi/pdf/10.1098/rspa.1927.0118">paper</a> by <a href="https://en.wikipedia.org/wiki/William_Ogilvy_Kermack">William Kermack</a>, a Scottish biochemist, and <a href="https://en.wikipedia.org/wiki/Anderson_Gray_McKendrick">Lt Col Anderson McKendrick</a> a Scottish military physician. In that paper, they introduce the <em>epidemic model</em>, establishing a general theory of infectious disease transmission, and making a seminal contribution to mathematical epidemiology.</p>
+<p>McKendrick made ground-breaking contributions to mathematical biology, and epidemiology in particular. These achievements are made even more remarkable considering McKendrick was technically an amateur mathematician.</p>
+<p>Many models of infectious disease are in some way a variant of the <em>epidemic model</em> introduced by Kermack and McKendrick. Their model is an example of what is now called <em>compartment modelling</em>, where <em>material</em> (people, in this case) is modelled as moving between certain states or homogeneous compartments (infected, recovered, etc.). Such models are well-suited to be analysed as dynamical systems (a family of differential equations), and are used in numerous other areas of biology.</p>
+<p>A special case occurs when infection rate and recovery rate are considered constant (along with some other simplifying assumptions). In this case, the <em>epidemic model</em> reduces to the so-called the SIR model: <strong>S</strong>usceptible <strong>I</strong>nfected <strong>R</strong>ecovered</p>
+<p><span class="math display">\[\begin{align}
+\frac{dS}{dt}=&amp; \: -\beta SI\\[10pt]
+\frac{dI}{dt}=&amp; \: \beta SI -\gamma I\\[10pt]
+\frac{dR}{dt}=&amp; \: \gamma I 
+\end{align}\]</span></p>
+<p>In this model, the well-known reproduction number <span class="math inline">\(R_{0}\)</span> used to denote how infectious a disease may be, is defined as <span class="math inline">\(R_{0}=\beta S / \gamma\)</span>.</p>
+<p>The quantity <span class="math inline">\(R_{0}\)</span> is one of epidemiology’s most important, and signifies the number of secondary infections caused by a single primary infection. When <span class="math inline">\(R_{0}&lt;1\)</span>, each infected person will infect fewer than 1 person before recovery (or death), and therefore the epidemic will fizzle out. On the other hand, when <span class="math inline">\(R_{0}&gt;1\)</span> each infected person will infect more than 1 person, and the disease spreads.</p>
+<p>Current estimates of <span class="math inline">\(R_{0}\)</span> for COVID-19 are between 2 and 3.</p>
 </div>
-<div id="general" class="section level1">
-<h1>General</h1>
-<p><a href="https://www.ineteconomics.org/">INET</a></p>
-<p><a href="https://www.quantopian.com/">Quantopian</a></p>
-<p><a href="https://www.linkedin.com/in/chriswrayuk/">LinkedIn</a></p>
+<div id="simple-sir-model-plotter" class="section level2">
+<h2>Simple SIR model plotter</h2>
+<p>Tap the image to lauch simple SIR model widget</p>
+<p><a href="https://chris-x.shinyapps.io/SimpleSIR/"><img src="images/SIR.JPG" alt="[Shiny app](https://chris-x.shinyapps.io/SimpleSIR/)" /></a></p>
 </div>
 
 

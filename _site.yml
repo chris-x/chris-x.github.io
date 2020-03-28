@@ -10,6 +10,8 @@ navbar:
          href: teaching.html
        - text: "Interesting elementary challenges"
          href: interesting.html
+       - text: "SIR Model"
+         href: SIR.html
     - text: "Code"
       menu:
        - text: "R/C++"

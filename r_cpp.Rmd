@@ -15,7 +15,9 @@ I mostly code in __R__, __R/C++__, __Python__ and __VBA__ depending upon the sit
 
 For specialised mathematical tasks I have used __Matlab__ and __Mathematica__ (and the intriguing [Wolfram language](http://www.wolfram.com/language/fast-introduction-for-programmers/en/)). I experimented with [Julia](http://julialang.org/), in its (very) early days. 
 
-Languages I find interesting (for one or another reasons) but have not (yet) needed to use, are:
+I've recently (2020) started to code in [__Go__](https://golang.org/), and aim to use it for general purpose and web application programming.
+
+Languages I find interesting (for one or another reason) but have not (yet) needed to use, are:
 
 * [__D__](https://dlang.org/) -- a language that started out as re-engineered C++, that claims to be safer and easier to code than its forebear.
 
@@ -23,7 +25,7 @@ Languages I find interesting (for one or another reasons) but have not (yet) nee
 
 * [__Ruby__](https://www.ruby-lang.org/en/) -- an interesting and well-regarded general purpose language developed in the 1990s.
 
-* [__C#__](https://msdn.microsoft.com/en-gb/library/67ef8sbd.aspx) -- a well-known and popular language similar to C++ and Java.
+* [__C#__](https://msdn.microsoft.com/en-gb/library/67ef8sbd.aspx) -- a well-known and popular language similar to Java.
 
 * [__Haskell__](https://www.haskell.org/) -- probably the most *heard-of* language in this list. A purely functional language named after Haskell Curry, who worked in combinatorial logic. Even the description sounds *difficult*...
 
@@ -103,7 +105,7 @@ microbenchmark(a[order(b,decreasing = TRUE)],sort_by(a,b))
 
 A Shiny interactive app to investigate the expected lengths of each of ordered $n+1$ segments of unit length stick. Tap the picture below to be taken to the Shiny app, or follow this [link](https://chris-x.shinyapps.io/StickBreak/).
 
-<!--- this actually works---!>
+
 <!-- <iframe src="https://chris-x.shinyapps.io/StickBreak/" style="border: none; width: 440px; height: 600px"></iframe> -->
 
 

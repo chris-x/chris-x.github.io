@@ -1,0 +1,39 @@
+---
+title: "COVID-19 2020"
+date: "27/03/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## SIR models
+
+The prototypical model for how a contagious disease spreads throughout a population was introduced in a 1927 [paper](https://royalsocietypublishing.org/doi/pdf/10.1098/rspa.1927.0118) by [William Kermack](https://en.wikipedia.org/wiki/William_Ogilvy_Kermack), a Scottish biochemist, and [Lt Col Anderson McKendrick](https://en.wikipedia.org/wiki/Anderson_Gray_McKendrick) a Scottish military physician. In that paper, they introduce the *epidemic model*, establishing a general theory of infectious disease transmission, and making a seminal contribution to mathematical epidemiology.
+
+McKendrick made ground-breaking contributions to mathematical biology, and epidemiology in particular. These achievements are made even more remarkable considering McKendrick was technically an amateur mathematician.
+
+Many models of infectious disease are in some way a variant of the *epidemic model* introduced by Kermack and McKendrick. Their model is an example of what is now called *compartment modelling*, where *material* (people, in this case) is modelled as moving between certain states or homogeneous compartments (infected, recovered, etc.). Such models are well-suited to be analysed as dynamical systems (a family of differential equations), and are used in numerous other areas of biology.
+
+A special case occurs when infection rate and recovery rate are considered constant (along with some other simplifying assumptions). In this case, the *epidemic model* reduces to the so-called the SIR model: **S**usceptible **I**nfected **R**ecovered
+
+\begin{align}
+\frac{dS}{dt}=& \: -\beta SI\\[10pt]
+\frac{dI}{dt}=& \: \beta SI -\gamma I\\[10pt]
+\frac{dR}{dt}=& \: \gamma I 
+\end{align}
+
+In this model, the well-known reproduction number $R_{0}$ used to denote how infectious a disease may be, is defined as $R_{0}=\beta S / \gamma$.
+
+The quantity $R_{0}$ is one of epidemiology's most important, and signifies the number of secondary infections caused by a single primary infection. When $R_{0}<1$, each infected person will infect fewer than 1 person before recovery (or death), and therefore the epidemic will fizzle out. On the other hand, when $R_{0}>1$ each infected person will infect more than 1 person, and the disease spreads.
+
+Current estimates of $R_{0}$ for COVID-19 are between 2 and 3.
+
+
+
+## Simple SIR model plotter
+
+Tap the image to lauch simple SIR model widget
+
+[![[Shiny app](https://chris-x.shinyapps.io/SimpleSIR/)](images/SIR.jpg)](https://chris-x.shinyapps.io/SimpleSIR/)

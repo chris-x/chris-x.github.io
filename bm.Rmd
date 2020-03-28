@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "&nbsp;"
 ---
 
 ```{r setup, include=FALSE}

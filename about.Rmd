@@ -6,10 +6,10 @@ title: "About"
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-I read mathematics at [St. Catharine's College](http://www.caths.cam.ac.uk/), part of the [University of Cambridge](https://www.cam.ac.uk/). 
-I then worked in quantitative risk analysis and asset management, and later on I completed a PhD in maths and complex systems at [University College London (UCL)](http://www.ucl.ac.uk/) supervised by [Prof. Steve Bishop](https://www.ucl.ac.uk/maths/steven-bishop). Part of my PhD was spent working with [Prof. Doyne Farmer (Oxford/INET)](http://www.oxfordmartin.ox.ac.uk/people/407) on agent-based modelling, and economic / financial complexity.
+I read mathematics, including Part III Maths, at [St. Catharine's College](http://www.caths.cam.ac.uk/), part of the [University of Cambridge](https://www.cam.ac.uk/). 
+I then worked in quantitative risk analysis and asset management, and subsequently completed a PhD in maths and complex systems at [University College London (UCL)](http://www.ucl.ac.uk/) supervised by [Prof. Steve Bishop](https://www.ucl.ac.uk/maths/steven-bishop). Part of my PhD was spent working with [Prof. Doyne Farmer (Oxford/INET)](http://www.oxfordmartin.ox.ac.uk/people/407) on agent-based modelling, and economic & financial complexity.
 
-After a spell as a post-doctoral researcher and lecturer for the mathematics department at [UCL](https://www.ucl.ac.uk/), I'm again working in asset management in London
+After a spell as a post-doctoral researcher and lecturer for the mathematics department at [UCL](https://www.ucl.ac.uk/), I'm again working in asset management in London.
 <br>
 
 You can reach me via: <chris@redboxrisk.com>
