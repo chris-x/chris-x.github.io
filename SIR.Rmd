@@ -6,14 +6,6 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
-#library(Rcpp)
-#library(shiny)
-#library(shinyWidgets)
-#library(ggplot2)
-#library(reshape)
-#library(plotly)
-
-#Rcpp::sourceCpp("cpp/SIR/sir_c.cpp")
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
@@ -59,7 +51,7 @@ Current estimates of $R_{0}$ for COVID-19 are between 2 and 3.
 Use the sliders to plot the solution of the above model.
 
 
-<iframe src="https://chris-x.shinyapps.io/SimpleSIR/" width="100%" height="645px"></iframe>
+<iframe src="https://chris-x.shinyapps.io/SimpleSIR/" width="100%" height="640px"></iframe>
 
 
 
@@ -72,7 +64,7 @@ Compartment modelling assumes that compartments are homogeneous. This simply mea
 A bigger issue with SIR-like models is not with the underlying compartmental apparatus, but in the assumptions required to analyse such systems with differential equations. Differential equations of the above nature, impose the assumption that a system is *well-mixed*. In the context above, this translates as any *susceptible* being equally likely to come into contact with any other *infected*, which is obviously not the case in real life. Disease outbreaks emerge in localised clusters (not randomly across a nation...), mirroring the __very__ local nature of the vast majority of individuals daily movement patterns.
 
 
-Alternative modelling approaches, such as agent-based dynamics taking place on networks, do not impose such unrealistic assumptions. These tools allow the careful modelling of the role infrastructure networks (train, bus, air), and places where people may *mix*, in conjunction with more realistic localised movement and contact patterns.
+Alternative modelling approaches, such as agent-based dynamics taking place on networks, do not impose such unrealistic assumptions. These tools allow the careful modelling of infrastructure networks (train, bus, air), and other places people may *mix*, in conjunction with more realistic localised movement and contact patterns.
 
 
 
