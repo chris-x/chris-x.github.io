@@ -60,7 +60,7 @@ Use the sliders to plot the solution of the above model.
 
 
 ```{r, echo=FALSE}
-knitr::include_app("https://chris-x.shinyapps.io/SimpleSIR/", height = "850px")
+knitr::include_app("https://chris-x.shinyapps.io/SimpleSIR/", height = "550px")
 ```
 
 
