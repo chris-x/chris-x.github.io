@@ -32,7 +32,7 @@ The parameters $\beta$ and $\gamma$ have the following meaning:
 $\beta$ is the rate at which *susceptibles* move to being *infected* per day, and captures both the probability of a susceptible and infected individuals having contact and a successful transmission of the disease taking place.
 
 
-$\gamma$ captures the length of days an individual remains infected, say $D$. Then ($1/\gamma = D$)
+$\gamma$ captures the number of days an individual remains infected. If this is say, $D$, then $1/\gamma = D$.
 
 
 ## $R_{0}$
@@ -58,7 +58,7 @@ Use the sliders to plot the solution of the above model.
 ## Criticism of the differential equation approach
 
 
-Compartment modelling assumes that compartments are homogeneous. This simply means any *material* in any given compartment are identical to any other in the same compartment. Increasing the number of compartments of a model in some sense negates this, but makes analysis more cumbersome.
+Compartment modelling assumes that compartments are homogeneous. This simply means the *material* in any given compartment is made up of identical units. Increasing the number of compartments of a model in some sense negates this, but makes analysis more cumbersome.
 
 
 A bigger issue with SIR-like models is not with the underlying compartmental apparatus, but in the assumptions required to analyse such systems with differential equations. Differential equations of the above nature, impose the assumption that a system is *well-mixed*. In the context above, this translates as any *susceptible* being equally likely to come into contact with any other *infected*, which is obviously not the case in real life. Disease outbreaks emerge in localised clusters (not randomly across a nation...), mirroring the __very__ local nature of the vast majority of individuals daily movement patterns.

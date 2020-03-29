@@ -361,7 +361,7 @@ $(document).ready(function () {
 \end{align}\]</span></p>
 <p>The parameters <span class="math inline">\(\beta\)</span> and <span class="math inline">\(\gamma\)</span> have the following meaning:</p>
 <p><span class="math inline">\(\beta\)</span> is the rate at which <em>susceptibles</em> move to being <em>infected</em> per day, and captures both the probability of a susceptible and infected individuals having contact and a successful transmission of the disease taking place.</p>
-<p><span class="math inline">\(\gamma\)</span> captures the length of days an individual remains infected, say <span class="math inline">\(D\)</span>. Then (<span class="math inline">\(1/\gamma = D\)</span>)</p>
+<p><span class="math inline">\(\gamma\)</span> captures the number of days an individual remains infected. If this is say, <span class="math inline">\(D\)</span>, then <span class="math inline">\(1/\gamma = D\)</span>.</p>
 </div>
 <div id="section-r_0" class="section level2">
 <h2><span class="math inline">\(R_{0}\)</span></h2>
@@ -377,7 +377,7 @@ $(document).ready(function () {
 </div>
 <div id="section-criticism-of-the-differential-equation-approach" class="section level2">
 <h2>Criticism of the differential equation approach</h2>
-<p>Compartment modelling assumes that compartments are homogeneous. This simply means any <em>material</em> in any given compartment are identical to any other in the same compartment. Increasing the number of compartments of a model in some sense negates this, but makes analysis more cumbersome.</p>
+<p>Compartment modelling assumes that compartments are homogeneous. This simply means the <em>material</em> in any given compartment is made up of identical units. Increasing the number of compartments of a model in some sense negates this, but makes analysis more cumbersome.</p>
 <p>A bigger issue with SIR-like models is not with the underlying compartmental apparatus, but in the assumptions required to analyse such systems with differential equations. Differential equations of the above nature, impose the assumption that a system is <em>well-mixed</em>. In the context above, this translates as any <em>susceptible</em> being equally likely to come into contact with any other <em>infected</em>, which is obviously not the case in real life. Disease outbreaks emerge in localised clusters (not randomly across a nation…), mirroring the <strong>very</strong> local nature of the vast majority of individuals daily movement patterns.</p>
 <p>Alternative modelling approaches, such as agent-based dynamics taking place on networks, do not impose such unrealistic assumptions. These tools allow the careful modelling of infrastructure networks (train, bus, air), and other places people may <em>mix</em>, in conjunction with more realistic localised movement and contact patterns.</p>
 <!--Tap the image to lauch simple SIR model widget
