@@ -59,59 +59,8 @@ Current estimates of $R_{0}$ for COVID-19 are between 2 and 3.
 Use the sliders to plot the solution of the above model.
 
 
-```{r, echo = FALSE}
- server <- function(input, output) {
- output$R0<-renderUI({
-         paste("Reproduction number R0 = ", round(input$D_rate*input$C_rate*input$P_rate/100,3))
-   })
-
- output$distPlot <-renderPlotly({
-         # generate bins based on input$bins from ui.R
-
-         df_1<-SIR_CF(input$C_rate*input$P_rate/100,1/input$D_rate,0.0025,0.1)
-
-         p<-ggplot(data=df_1)+
-             geom_line(size=1.2,aes(x = Time, y = Vals, color = Group))+
-             scale_colour_manual(values=c(I="#ef3d59",S="#1a75ff",R="#4ab19d"))+
-             ylab("% population")+
-             xlab("Time (days)")+
-             labs(color='')+
-             theme_bw()
-         p<-ggplotly(p)
-         p
-     })
- }
-
-ui<-fluidPage(
- sidebarLayout(
-         sidebarPanel(width = 3,chooseSliderSkin("Nice"),
-                      sliderInput("C_rate",
-                                  "Contacts per day:",
-                                  min = 1,
-                                  max = 20,
-                                  step = 0.5,
-                                  value = 8),
-                      sliderInput("D_rate",
-                                  "Days infection lasts:",
-                                  min = 1,
-                                  max = 30,
-                                  step = 0.5,
-                                  value = 25),
-                      sliderInput("P_rate",
-                                  "Infection probability %:",
-                                  min = 0.01,
-                                  max = 100.0,
-                                  step = 1,
-                                  value = 5)
-         ),
-         mainPanel(
-            uiOutput("R0"),
-             plotlyOutput("distPlot")
-         )
- )
- )
-
-shinyApp(ui = ui, server = server)
+```{r, echo=FALSE}
+knitr::include_app("https://chris-x.shinyapps.io/SimpleSIR/")
 ```
 
 
