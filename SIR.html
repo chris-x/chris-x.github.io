@@ -11,7 +11,7 @@
 
 
 
-<title>COVID-19 2020</title>
+<title>COVID-19 2020 FlattenTheCurve…</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -338,17 +338,17 @@ $(document).ready(function () {
   </div><!--/.container -->
 </div><!--/.navbar -->
 
-<div class="fluid-row" id="header">
+<div class="fluid-row" id="section-header">
 
 
 
-<h1 class="title toc-ignore">COVID-19 2020</h1>
+<h1 class="title toc-ignore">COVID-19 2020 FlattenTheCurve…</h1>
 <h4 class="date">27/03/2020</h4>
 
 </div>
 
 
-<div id="sir-models" class="section level2">
+<div id="section-sir-models" class="section level2">
 <h2>SIR models</h2>
 <p>The prototypical model for how a contagious disease spreads throughout a population was introduced in a 1927 <a href="https://royalsocietypublishing.org/doi/pdf/10.1098/rspa.1927.0118">paper</a> by <a href="https://en.wikipedia.org/wiki/William_Ogilvy_Kermack">William Kermack</a>, a Scottish biochemist, and <a href="https://en.wikipedia.org/wiki/Anderson_Gray_McKendrick">Lt Col Anderson McKendrick</a> a Scottish military physician. In that paper, they introduce the <em>epidemic model</em>, establishing a general theory of infectious disease transmission, and making a seminal contribution to mathematical epidemiology.</p>
 <p>McKendrick made ground-breaking contributions to mathematical biology, and epidemiology in particular. These achievements are made even more remarkable considering McKendrick was technically an amateur mathematician.</p>
@@ -359,14 +359,31 @@ $(document).ready(function () {
 \frac{dI}{dt}=&amp; \: \beta SI -\gamma I\\[10pt]
 \frac{dR}{dt}=&amp; \: \gamma I 
 \end{align}\]</span></p>
+<p>The parameters <span class="math inline">\(\beta\)</span> and <span class="math inline">\(\gamma\)</span> have the following meaning:</p>
+<p><span class="math inline">\(\beta\)</span> is the rate at which <em>susceptibles</em> move to being <em>infected</em> per day, and captures both the probability of a susceptible and infected individuals having contact and a successful transmission of the disease taking place.</p>
+<p><span class="math inline">\(\gamma\)</span> captures the length of days an individual remains infected, say <span class="math inline">\(D\)</span>. Then (<span class="math inline">\(1/\gamma = D\)</span>)</p>
+</div>
+<div id="section-r_0" class="section level2">
+<h2><span class="math inline">\(R_{0}\)</span></h2>
 <p>In this model, the well-known reproduction number <span class="math inline">\(R_{0}\)</span> used to denote how infectious a disease may be, is defined as <span class="math inline">\(R_{0}=\beta S / \gamma\)</span>.</p>
 <p>The quantity <span class="math inline">\(R_{0}\)</span> is one of epidemiology’s most important, and signifies the number of secondary infections caused by a single primary infection. When <span class="math inline">\(R_{0}&lt;1\)</span>, each infected person will infect fewer than 1 person before recovery (or death), and therefore the epidemic will fizzle out. On the other hand, when <span class="math inline">\(R_{0}&gt;1\)</span> each infected person will infect more than 1 person, and the disease spreads.</p>
 <p>Current estimates of <span class="math inline">\(R_{0}\)</span> for COVID-19 are between 2 and 3.</p>
 </div>
-<div id="simple-sir-model-plotter" class="section level2">
+<div id="section-simple-sir-model-plotter" class="section level2">
 <h2>Simple SIR model plotter</h2>
-<p>Tap the image to lauch simple SIR model widget</p>
-<p><a href="https://chris-x.shinyapps.io/SimpleSIR/"><img src="images/SIR.JPG" alt="[Shiny app](https://chris-x.shinyapps.io/SimpleSIR/)" /></a></p>
+<p>Use the sliders to plot the solution of the above model.</p>
+<iframe src="https://chris-x.shinyapps.io/SimpleSIR/?showcase=0" width="672" height="500px">
+</iframe>
+</div>
+<div id="section-criticism-of-the-differential-equation-approach" class="section level2">
+<h2>Criticism of the differential equation approach</h2>
+<p>Compartment modelling assumes that compartments are homogeneous. This simply means any <em>material</em> in any given compartment are identical to any other in the same compartment. Increasing the number of compartments of a model in some sense negates this, but makes analysis more cumbersome.</p>
+<p>A bigger issue with SIR-like models is not with the underlying compartmental apparatus, but in the assumptions required to analyse such systems with differential equations. Differential equations of the above nature, impose the assumption that a system is <em>well-mixed</em>. In the context above, this translates as any <em>susceptible</em> being equally likely to come into contact with any other <em>infected</em>, which is obviously not the case in real life. Disease outbreaks emerge in localised clusters (not randomly across a nation…), mirroring the <strong>very</strong> local nature of the vast majority of individuals daily movement patterns.</p>
+<p>Alternative modelling approaches, such as agent-based dynamics taking place on networks, do not impose such unrealistic assumptions. These tools allow the careful modelling of the role infrastructure networks (train, bus, air), and places where people may <em>mix</em>, in conjunction with more realistic localised movement and contact patterns.</p>
+<!--Tap the image to lauch simple SIR model widget
+
+[![[Shiny app](https://chris-x.shinyapps.io/SimpleSIR/)](images/SIR.jpg)](https://chris-x.shinyapps.io/SimpleSIR/)
+-->
 </div>
 
 
@@ -391,7 +408,7 @@ $(document).ready(function () {
 
 <script>
 $(document).ready(function () {
-  window.buildTabsets("TOC");
+  window.buildTabsets("section-TOC");
 });
 
 $(document).ready(function () {
