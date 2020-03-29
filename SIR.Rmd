@@ -1,5 +1,5 @@
 ---
-title: "COVID-19 2020 FlattenTheCurve..."
+title: "COVID-19 FlattenTheCurve..."
 date: "27/03/2020"
 runtime: shiny
 output: html_document
