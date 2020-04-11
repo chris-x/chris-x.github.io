@@ -7,6 +7,13 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+# Deep learning via TensorFlow: R and Python
+
+soon...
+<br>
+[![(https://www.tensorflow.org/)](images/tf_logo_social.png){#id .class width=50% height=50%}](https://www.tensorflow.org/)
+<br>
+
 # Quant risk and Black-Scholes
 
 R app to be deployed via web 
@@ -17,15 +24,6 @@ R app to be deployed via web
 Python code to be uploaded
 <br>
 
-# Deep learning via Python and Keras
 
-Python code to be uploaded
-<br>
-
-# Neural networks with R and MXNet
-
-R app to be deployed via web 
-
-<br>
 
 
