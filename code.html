@@ -498,20 +498,21 @@ microbenchmark(a[order(b,decreasing = TRUE)],sort_by(a,b))</code></pre>
 </div>
 <div id="data-tidyverse-and-data.table" class="section level2">
 <h2>Data: tidyverse and data.table</h2>
-<p><a href="https://blog.rstudio.org/2016/09/15/tidyverse-1-0-0/">Tidyverse</a> is the term given to the suite of R packages that have significantly enhanced (to put it mildly) how one approaches the task of data analysis, data wrangling and data visualisation in R – compared to the <em>base R</em> workflow of <code>data.frame</code> and <code>plot</code>. While data frames are still a core feature of the language, and base R plot can plot almost anything (if you dedicate enough time to the task), the tidyverse philosophy significantly reduces the time (and effort) it takes to produce those <em>interesting</em> and <em>complex</em> analyses base R struggles with.</p>
+<p><a href="https://www.tidyverse.org/">Tidyverse</a> is the term given to the suite of R packages that have significantly enhanced (to put it mildly) how one approaches the task of data analysis, data wrangling and data visualisation in R – compared to the <em>base R</em> workflow of <code>data.frame</code> and <code>plot</code>. While data frames are still a core feature of the language, and base R plot can plot almost anything (if you dedicate enough time to the task), the tidyverse philosophy significantly reduces the time (and effort) it takes to produce those <em>interesting</em> and <em>complex</em> analyses base R struggles with. Packages such as <code>dplyr</code> and <code>purrr</code> significally enhance base R capabilities</p>
 <p><a href="https://github.com/Rdatatable/data.table/wiki">Data.table</a> offers another replacement for base data frames, utilising <em>by-reference</em> operations on data, it is incredibly fast and efficient and can work with GB’s of data effortlessly. While dplyr (part of the tidyverse suite) offers a clean and consistent syntax - together with much improved performance over direct use of <code>data.frame</code> - data table should be considered where speed is important.</p>
 <p><br></p>
 </div>
 </div>
 <div id="python" class="section level1">
 <h1>Python</h1>
-<p>I first used <a href="https://www.python.org/">Python</a> in 2011, and use it when/where I can. Python is a simple and readable language to work with, and is sufficiently distinct from R and C++ to make learning and developing with it interesting and useful. Although not specifically designed for statistical data analysis, Python has excellent support for it via the <a href="http://pandas.pydata.org/">pandas</a> data analysis library.</p>
-<p>For statistical / machine learning, the well-known <a href="http://scikit-learn.org/stable/">scikit-learn</a> is excellent, and there is Python support for deep learning via <a href="https://keras.io/">Keras</a> (running on theano or TensorFlow).</p>
+<p>I first used <a href="https://www.python.org/">Python</a> in 2011, and enjoy using it when the need arises. Python is a simple and readable language to work with, and is sufficiently distinct from R and C++ to make learning and developing with it interesting and useful (for me). Although not specifically designed for statistical data analysis, Python has excellent support for it via numerous modules, such as <a href="http://pandas.pydata.org/">pandas</a>.</p>
+<p>For statistical / machine learning, the well-known <a href="http://scikit-learn.org/stable/">scikit-learn</a> is excellent, and there is Python support for deep learning via <a href="https://www.tensorflow.org/">TensorFlow</a> and <a href="https://keras.io/">Keras</a> (now subsumed within <a href="https://www.tensorflow.org/api/stable">TensorFlow 2</a>).</p>
 <p><br></p>
 </div>
 <div id="r-v-python" class="section level1">
 <h1>R v Python?</h1>
-<p>See <a href="https://blog.dominodatalab.com/video-huge-debate-r-vs-python-data-science/">this excellent video</a> for a comparison of Python and R in terms of data science. The answer is, of course, both are excellent and neither one is perfect.</p>
+<p>See <a href="https://blog.dominodatalab.com/video-huge-debate-r-vs-python-data-science/">this excellent video</a> for a comparison of Python and R in terms of data science.</p>
+<p>The answer is, of course, both are excellent and neither one is perfect. Developers, like anyone else, tend to suffer from a cognitive bias in the form of an over-reliance on familiar tools. This situation is nicely summed up by a quote often attributed to Abraham Maslow: <em>‘…it is tempting, if the only tool you have is a hammer, to treat everything as if it were a nail’</em>.</p>
 </div>
 
 

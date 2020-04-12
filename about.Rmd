@@ -6,10 +6,21 @@ title: "About"
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-I read mathematics, including Part III Maths, at [St. Catharine's College](http://www.caths.cam.ac.uk/), part of the [University of Cambridge](https://www.cam.ac.uk/). 
-I then worked in quantitative risk analysis and asset management, and subsequently completed a PhD in maths and complex systems at [University College London (UCL)](http://www.ucl.ac.uk/) supervised by [Prof. Steve Bishop](https://www.ucl.ac.uk/maths/steven-bishop). Part of my PhD was spent working with [Prof. Doyne Farmer (Oxford/INET)](http://www.oxfordmartin.ox.ac.uk/people/407) on agent-based modelling, and economic & financial complexity.
+I read BA mathematics, including Part III (MMath), at [St. Catharine's College](http://www.caths.cam.ac.uk/) which is part of the [University of Cambridge](https://www.cam.ac.uk/). 
+I then worked in quantitative risk analysis and portfolio management for [BlackRock](https://www.blackrock.com/), and whilst there completed:
+<br>
 
-After a spell as a post-doctoral researcher and lecturer for the mathematics department at [UCL](https://www.ucl.ac.uk/), I'm again working in asset management in London.
+* MSc in Financial Engineering in the Dept. Economics, Maths and Stats, [Birkbeck](http://www.bbk.ac.uk/)
+
+* MRes in Financial Computing in the Dept. Computer Science, [University College London (UCL)](http://www.ucl.ac.uk/)
+
+* PhD in Mathematics _(Complex systems models of financial and systemic risk)_,  [University College London (UCL)](http://www.ucl.ac.uk/) supervised by [Prof. Steve Bishop](https://www.ucl.ac.uk/maths/steven-bishop). Part of my PhD was spent working with [Prof. Doyne Farmer (Oxford/INET)](http://www.oxfordmartin.ox.ac.uk/people/407) on agent-based modelling, and economic & financial complexity.
+
+<br>
+I enjoy putting my interdisciplinary academic interests of mathematics & statistics, economics and computing to use, as well as nurturing new ones.
+<br>
+
+After a spell as a post-doctoral researcher and lecturer for the mathematics department at [UCL](https://www.ucl.ac.uk/), I'm again working in investment management, mainly on projects centred around the Blackrock Solutions [Aladdin](https://www.blackrock.com/aladdin/offerings/aladdin-overview) platform for BRS external clients.
 <br>
 
 You can reach me via: <chris@redboxrisk.com>

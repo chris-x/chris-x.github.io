@@ -111,7 +111,7 @@ A Shiny interactive app to investigate the expected lengths of each of ordered $
 
 ## Data: tidyverse and data.table
 
-[Tidyverse](https://blog.rstudio.org/2016/09/15/tidyverse-1-0-0/) is the term given to the suite of R packages that have significantly enhanced (to put it mildly) how one approaches the task of data analysis, data wrangling and data visualisation in R -- compared to the *base R* workflow of `data.frame` and `plot`. While data frames are still a core feature of the language, and base R plot can plot almost anything (if you dedicate enough time to the task), the tidyverse philosophy significantly reduces the time (and effort) it takes to produce those *interesting* and *complex* analyses base R struggles with.
+[Tidyverse](https://www.tidyverse.org/) is the term given to the suite of R packages that have significantly enhanced (to put it mildly) how one approaches the task of data analysis, data wrangling and data visualisation in R -- compared to the *base R* workflow of `data.frame` and `plot`. While data frames are still a core feature of the language, and base R plot can plot almost anything (if you dedicate enough time to the task), the tidyverse philosophy significantly reduces the time (and effort) it takes to produce those *interesting* and *complex* analyses base R struggles with. Packages such as `dplyr` and `purrr` significally enhance base R capabilities 
 
 [Data.table](https://github.com/Rdatatable/data.table/wiki) offers another replacement for base data frames, utilising *by-reference* operations on data, it is incredibly fast and efficient and can work with GB's of data effortlessly. While dplyr (part of the tidyverse suite) offers a clean and consistent syntax - together with much improved performance over direct use of `data.frame` - data table should be considered where speed is important.
 
@@ -119,13 +119,15 @@ A Shiny interactive app to investigate the expected lengths of each of ordered $
 
 # Python
 
-I first used [Python](https://www.python.org/) in 2011, and use it when/where I can. Python is a simple and readable language to work with, and is sufficiently distinct from R and C++ to make learning and developing with it interesting and useful. Although not specifically designed for statistical data analysis, Python has excellent support for it via the [pandas](http://pandas.pydata.org/) data analysis library.
+I first used [Python](https://www.python.org/) in 2011, and enjoy using it when the need arises. Python is a simple and readable language to work with, and is sufficiently distinct from R and C++ to make learning and developing with it interesting and useful (for me). Although not specifically designed for statistical data analysis, Python has excellent support for it via numerous modules, such as [pandas](http://pandas.pydata.org/).
 
-For statistical / machine learning, the well-known [scikit-learn](http://scikit-learn.org/stable/) is excellent, and there is Python support for deep learning via [Keras](https://keras.io/) (running on theano or TensorFlow).
+For statistical / machine learning, the well-known [scikit-learn](http://scikit-learn.org/stable/) is excellent, and there is Python support for deep learning via [TensorFlow](https://www.tensorflow.org/) and [Keras](https://keras.io/) (now subsumed within [TensorFlow 2](https://www.tensorflow.org/api/stable)).
 
 <br>
 
 # R v Python?
 
-See [this excellent video](https://blog.dominodatalab.com/video-huge-debate-r-vs-python-data-science/) for a comparison of Python and R in terms of data science. The answer is, of course, both are excellent and neither one is perfect.
+See [this excellent video](https://blog.dominodatalab.com/video-huge-debate-r-vs-python-data-science/) for a comparison of Python and R in terms of data science. 
+
+The answer is, of course, both are excellent and neither one is perfect. Developers, like anyone else, tend to suffer from a cognitive bias in the form of an over-reliance on familiar tools. This situation is nicely summed up by a quote often attributed to Abraham Maslow: _'...it is tempting, if the only tool you have is a hammer, to treat everything as if it were a nail'_.
 
